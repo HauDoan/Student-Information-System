@@ -1,0 +1,31 @@
+{
+	"folders": [
+		{
+			"path": "controller"
+		},
+		{
+			"path": "history"
+		},
+		{
+			"path": "models"
+		},
+		{
+			"path": "node_modules"
+		},
+		{
+			"path": "public"
+		},
+		{
+			"path": "routes"
+		},
+		{
+			"path": "tu"
+		},
+		{
+			"path": "uploads"
+		},
+		{
+			"path": "views"
+		}
+	]
+}

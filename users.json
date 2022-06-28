@@ -1,0 +1,420 @@
+[{
+  "_id": {
+    "$oid": "60a131920d606948dc30e59a"
+  },
+  "name": "admin",
+  "username": "admin",
+  "password": "$2b$10$nFqkbzqu0yYvhFtrOBKdbezybLDjagFIr38VtCeGE9MYkIjyQZpky",
+  "avatar": "/public/img/lecture.png",
+  "role": [
+    "Phòng Công tác học sinh sinh viên (CTHSSV)",
+    "Phòng Đại học",
+    "Phòng điện toán và máy tính",
+    "Phòng khảo thí và kiểm định chất lượng",
+    "Phòng tài chính",
+    "TDT Creative Language Center",
+    "Trung tâm tin học",
+    "Trung tâm đào tạo phát triển xã hội (SDTC)",
+    "Trung tâm phát triển Khoa học quản lý và Ứng dụng công nghệ (ATEM)",
+    "Trung tâm hợp tác doanh nghiệp và cựu sinh viên",
+    "Trung tâm ngoại ngữ - tin học – bồi dưỡng văn hóa",
+    "Viện chính sách kinh tế và kinh doanh",
+    "Khoa Mỹ thuật công nghiệp",
+    "Khoa Điện – Điện tử",
+    "Khoa Luật",
+    "Khoa Công nghệ thông tin",
+    "Khoa Quản trị kinh doanh",
+    "Khoa Môi trường và bảo hộ lao động",
+    "Khoa Lao động công đoàn",
+    "Khoa Tài chính ngân hàng",
+    "Khoa giáo dục quốc tế"
+  ],
+  "posts": [
+    {
+      "_id": {
+        "$oid": "60a131de0d606948dc30e59b"
+      },
+      "createdAt": 1621176798408,
+      "video": null,
+      "title": "Điểm 10% và cấm thi",
+      "description": "Các em xem file đính kèm để biết số buổi vắng và điểm 10% của mình, mọi thắc mắc gửi mail cho thầy từ nay đến hết ngày 14/05/2021, sau thời hạn trên mọi thắc mắc sẽ không được giải quyết.\nLưu ý:\n1. Các ngày có ghi số \"1\" là có mặt ngược lại là vắng\n2. Những bạn vắng trên 3 buổi sẽ bị cấm thi (cấm báo cáo cuối kỳ)\n3. Những trường hợp đã xin phép thầy thì reply email xin phép để thầy cập nhật các buổi có phép vào danh sách.\n4. Các bài làm trên lớp nộp giấy trắng hoặc nộp 1/4 tờ giấy đôi xem như 0đ bài đó (tương đương 1 buổi vắng)",
+      "thumbnail": "public\\my-uploads\\moy-sosed-totoro-totoro-blue_1621176798402.jpeg",
+      "comments": [
+        {
+          "_id": "dsfdsfds1621177449720",
+          "text": "dsfdsfds",
+          "createdAt": 1621177449720,
+          "name": "admin",
+          "avatar": "/public/img/lecture.png"
+        }
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "60a132520d606948dc30e59c"
+      },
+      "createdAt": 1621176914858,
+      "video": "https://www.youtube.com/embed/Ws-QlpSltr8",
+      "title": "Nộp đồ án cuối kỳ",
+      "description": "Các em nộp đồ án cuối kỳ ở đây.\nLưu ý:\n0. Chỉ một người đại diện nhóm nộp bài.\n1. Thời hạn nộp: từ nay đến hết ngày 09/05/2021, các nhóm không nộp hoặc nộp sau thời hạn trên sẽ bị 0đ.\n2. Các em xem kỹ phần \"Nộp bài và thang điểm chi tiết\" trong mô tả đồ án đã được thông báo khi giao đề tài, thầy có đính kèm bên dưới để các em xem lại. Các trường hợp nộp sai yêu cầu sẽ bị trừ điểm hoặc bị 0đ tuỳ trường hợp.\n3. Thầy chỉ nhận bài nộp ở đây, KHÔNG nhận bài qua bất kỳ hình thức nào khác.\n4. Thời gian báo cáo (nếu có) sẽ được thông báo sau.\n5. File “danhgia.docx” chứa điểm số tự đánh giá của nhóm dùng bảng thang điểm chi tiết trong file mô tả đề tài thêm cột “Tự đánh giá” vào bên phải của bảng. Các thành viên có đóng góp khác nhau thì ghi tên và điểm cụ thể cho mỗi người ở các mục đánh giá và ở mục tổng điểm.",
+      "thumbnail": "",
+      "comments": [
+        {
+          "_id": "dsfdsfds1621177449720",
+          "text": "dsfdsfds",
+          "createdAt": 1621177449720,
+          "name": "admin",
+          "avatar": "/public/img/lecture.png"
+        }
+      ]
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "60a1326c0d606948dc30e59d"
+  },
+  "name": "Khoa Công nghệ thông tin",
+  "role": [
+    "Khoa Công nghệ thông tin",
+    "Khoa Mỹ thuật công nghiệp",
+    "Khoa Luật"
+  ],
+  "username": "cntt",
+  "password": "$2b$10$zGoRMsFTWhhj/DvTErC0beIyeNRXcdN4AqfcQEz6xL4.1FRiCa1eW",
+  "avatar": "/public/img/lecture.png",
+  "posts": [
+    {
+      "_id": {
+        "$oid": "60a1355ec581111b08ae85ba"
+      },
+      "createdAt": 1621177694216,
+      "video": null,
+      "title": "Học online ngày 01/03/2021",
+      "description": "Các em lưu ý thời gian học:\n+ Nhóm học ca 1 bắt đầu lúc 7:30\n+ Nhóm học ca 2 bắt đầu lúc 9:30",
+      "thumbnail": "public\\my-uploads\\pexels-abhishek-gaurav-794644_1621177694207.jpeg",
+      "comments": []
+    },
+    {
+      "_id": {
+        "$oid": "60a136cec581111b08ae85bd"
+      },
+      "createdAt": 1621178062391,
+      "video": "https://www.youtube.com/embed/840Vw6IB5Zw",
+      "title": "Thực hành",
+      "description": "Bài thực hành số 8 - 9 có phần tạo api orders. Đây là mục khá khó và không có trong video hướng dẫn, thầy sẽ ko chấm điểm phần api orders. Tuy nhiên nếu bạn nào muốn nghiên cứu sâu về Backend thì buổi thực hành thầy sẽ hướng dẫn các bạn tìm hi",
+      "thumbnail": "",
+      "comments": []
+    },
+    {
+      "_id": {
+        "$oid": "60a136f3c581111b08ae85be"
+      },
+      "createdAt": 1621178099235,
+      "video": "https://www.youtube.com/embed/Ws-QlpSltr8",
+      "title": "Học online ngày 22/02/2021",
+      "description": "Thông báo nộp bài tiểu luận:\n - Ngày 10/05/2021 các bạn nộp bài vào classroom cho thầy Zip lại theo cú pháp TL_[STT Nhom]_N10T1.Zip. Thầy sẽ tạo đường link nộp bài sau. Nội dung file bao gồm:\n         + File báo cáo word\n         + Video demo\n         + Source code\n- Barem chấm điểm:\n     + Báo cáo 40%\n     + Video demo 30%\n     + Source code 20%\n     + Còn lại 10%: \n        *  Đối với những bạn làm đè tài web: Triển khai ứng dụng lên heroku, google cloud, aws,...\n        *  Đối với những bạn làm đè tài ứng dụng electronJS: Build ứng dụng thành file chạy, nộp vào file Zip. \n\nLưu ý: Cùng 1 nhó",
+      "thumbnail": "",
+      "comments": []
+    },
+    {
+      "_id": {
+        "$oid": "60a13705c581111b08ae85bf"
+      },
+      "createdAt": 1621178117821,
+      "video": null,
+      "title": "QT2",
+      "description": "Chào các bạn,\nSau khi các thầy thống nhất lại về barem điểm QT2 vẫn giữ như cũ nha: \n + Báo cáo 60%\n + Video demo 40%",
+      "thumbnail": "",
+      "comments": []
+    },
+    {
+      "_id": {
+        "$oid": "60a1371cc581111b08ae85c0"
+      },
+      "createdAt": 1621178140883,
+      "video": null,
+      "title": "Phòng trọ 25m2 - Nguyễn Thị Thập- Q7",
+      "description": "Chào cả lớp,\nThầy đang bắt đầu chấm bài của các bạn. Có rất nhiều bạn nén file bị lỗi thầy ko giải nén được. Vì vậy bạn nào thầy chấm bị lỗi giải nén thì nén thành định dạng .zip và assign lại cho thầy. Bạn nào không assign lại đến hết ngày 08/04 thì mặc định 0 điểm nhe",
+      "thumbnail": "",
+      "comments": []
+    },
+    {
+      "_id": {
+        "$oid": "60a13815c581111b08ae85c6"
+      },
+      "createdAt": 1621178389895,
+      "video": null,
+      "title": "Thông báo học bù online.",
+      "description": "Hôm nay lớp Phương pháp tính học bù bằng hình thức online. Thời gian: 15:05-17:30\n\n\nNội dung buổi học: \n\n\n- Tiếp tục nội dung chương 6: Phương pháp LU giải hệ phương trình tuyến tính.\n\n\n- Kiểm tra lấy điểm quá trình.\n\n\n- Hướng dẫn làm bài báo cáo cuối kỳ.",
+      "thumbnail": "",
+      "comments": []
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "60a132750d606948dc30e59e"
+  },
+  "name": "Khoa Luật",
+  "role": [
+    "Khoa Luật",
+    "Khoa giáo dục quốc tế",
+    "Khoa Môi trường và bảo hộ lao động",
+    "Khoa Mỹ thuật công nghiệp"
+  ],
+  "username": "luat",
+  "password": "$2b$10$/LcWziTARWunX4oG1HHj5OWNqwSJDXjjjXMB7LMa/0JIQxLeYqx0y",
+  "avatar": "/public/img/lecture.png",
+  "posts": [
+    {
+      "_id": {
+        "$oid": "60a135bdc581111b08ae85bb"
+      },
+      "createdAt": 1621177789547,
+      "video": "https://www.youtube.com/embed/Ws-QlpSltr8",
+      "title": "Học online ngày 22/02/2021",
+      "description": "Ngày 22/02/2021 chúng ta sẽ học online, ca 1 bắt đầu lúc 7:30, ca 2 bắt đầu lúc 9:30. Link vào meeting ở phía trên của class.",
+      "thumbnail": "",
+      "comments": []
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "60a132820d606948dc30e59f"
+  },
+  "name": "Khoa Quản trị kinh doanh",
+  "role": [
+    "Khoa Luật",
+    "Khoa Mỹ thuật công nghiệp",
+    "Khoa Quản trị kinh doanh",
+    "Khoa giáo dục quốc tế",
+    "Khoa Lao động công đoàn",
+    "Khoa Tài chính ngân hàng"
+  ],
+  "username": "qtkd",
+  "password": "$2b$10$ZEnJQpX2joz1KmWhRurlteOkMFdK4X/6JzA.unoucnmYjIFa9s.WC",
+  "avatar": "/public/img/lecture.png",
+  "posts": []
+},{
+  "_id": {
+    "$oid": "60a132940d606948dc30e5a0"
+  },
+  "name": "TDT Creative Language Center",
+  "role": [
+    "Khoa giáo dục quốc tế",
+    "Khoa Luật",
+    "Khoa Quản trị kinh doanh",
+    "Khoa Tài chính ngân hàng",
+    "Khoa Môi trường và bảo hộ lao động",
+    "Khoa Mỹ thuật công nghiệp"
+  ],
+  "username": "english",
+  "password": "$2b$10$SWDWtz0CuYu1YPMgJDV/xOGLO0P1WQBlKKzR5W1vCDJehgQxdnrhu",
+  "avatar": "/public/img/lecture.png",
+  "posts": [
+    {
+      "_id": {
+        "$oid": "60a13690c581111b08ae85bc"
+      },
+      "createdAt": 1621178000548,
+      "video": null,
+      "title": "Học Tiếng Anh",
+      "description": "Hôm nay trời đẹp",
+      "thumbnail": "public\\my-uploads\\68117b5fe25492f030959a78a7b2281e_1621178000544.jpeg",
+      "comments": []
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "60a13443c581111b08ae85b5"
+  },
+  "name": "Trung tâm hợp tác doanh nghiệp và cựu sinh viên",
+  "role": [
+    "Khoa Lao động công đoàn",
+    "Khoa Môi trường và bảo hộ lao động",
+    "Khoa Mỹ thuật công nghiệp",
+    "Khoa Quản trị kinh doanh"
+  ],
+  "username": "doanhnghiep",
+  "password": "$2b$10$toxj7eN9EZLyM9nwfXYNIu5E7yFrfM.QZo9VLXevUbOOj9rcwhIDK",
+  "avatar": "/public/img/lecture.png",
+  "posts": []
+},{
+  "_id": {
+    "$oid": "60a13480c581111b08ae85b6"
+  },
+  "email": "51802077@student.tdtu.edu.vn",
+  "name": "Lê Thành Đạt",
+  "avatar": "public/thumbnails/42639.jpg",
+  "mssv": "51802077",
+  "faculty": "Khoa Công nghệ thông tin",
+  "class": "18050281",
+  "posts": [
+    {
+      "_id": {
+        "$oid": "60a134cfc581111b08ae85b7"
+      },
+      "createdAt": 1621177551187,
+      "video": null,
+      "title": "Bài tập lý thuyết buổi 10",
+      "description": "Các em làm trang web cho phép đăng nhập bằng Google, Facebook; sau khi đăng nhập xong thì hiển thị thông tin thời tiết tại Tp. HCM và Hà Nội.\nThời hạn nộp: hết ngày 19/3/2021",
+      "thumbnail": "public\\my-uploads\\15_1621177551182.jpeg",
+      "comments": [
+        {
+          "_id": "Helloo1621180923016",
+          "text": "Helloo",
+          "createdAt": 1621180923016,
+          "name": "Lê Thành Đạt",
+          "avatar": "public/thumbnails/42639.jpg"
+        }
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "60a141c7aaa82b465491eaaa"
+      },
+      "createdAt": 1621180871019,
+      "video": null,
+      "title": "Thông báo học bù online.",
+      "description": "Báo cáo cuối kỳ.",
+      "thumbnail": "",
+      "comments": [
+        {
+          "_id": "Helloo1621180923016",
+          "text": "Helloo",
+          "createdAt": 1621180923016,
+          "name": "Lê Thành Đạt",
+          "avatar": "public/thumbnails/42639.jpg"
+        }
+      ]
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "60a134f9c581111b08ae85b8"
+  },
+  "email": "51800751@student.tdtu.edu.vn",
+  "name": "Trương Tiến Lực",
+  "avatar": "https://lh3.googleusercontent.com/a-/AOh14GjcQmZxO7qPgvgp8fktG6ttSOw0fdXCS0qtIEhF=s96-c",
+  "mssv": "51800751",
+  "faculty": "Khoa Công nghệ thông tin",
+  "class": "18050281",
+  "posts": [
+    {
+      "_id": {
+        "$oid": "60a13536c581111b08ae85b9"
+      },
+      "createdAt": 1621177654657,
+      "video": "https://www.youtube.com/embed/Ws-QlpSltr8",
+      "title": "Demo REST API",
+      "description": "Nhóm học ca 1 tham khảo thêm video ca 2 để hiểu phần code. (sẽ upload video sau)",
+      "thumbnail": "",
+      "comments": []
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "60a1373ec581111b08ae85c1"
+  },
+  "name": "Khoa Điện – Điện tử",
+  "role": [
+    "Khoa Điện – Điện tử",
+    "Khoa Lao động công đoàn",
+    "Khoa Luật",
+    "Khoa Môi trường và bảo hộ lao động"
+  ],
+  "username": "dien",
+  "password": "$2b$10$8ImhRgDhkf6xtvqXp7u5decai23YHXQ7A47291h1KjSw7HeleU2j2",
+  "avatar": "/public/img/lecture.png",
+  "posts": [
+    {
+      "_id": {
+        "$oid": "60a13760c581111b08ae85c2"
+      },
+      "createdAt": 1621178208325,
+      "video": "https://www.youtube.com/embed/Ws-QlpSltr8",
+      "title": "Các bạn chú ý ngày mai chúng ta học online nhé. Meet link thầy đã tạo sẵn ở trên.",
+      "description": "Thầy gửi các bạn link video hướng dẫn thực hành số 2 do thầy Mạnh biên soạn.\nhttps://www.youtube.com/watch?v=OYKenuzAnq0&list=PLu1AuqcHccUjZDwSpAiIlA1Wp2mnh63_e",
+      "thumbnail": "",
+      "comments": []
+    },
+    {
+      "_id": {
+        "$oid": "60a1377cc581111b08ae85c3"
+      },
+      "createdAt": 1621178236465,
+      "video": null,
+      "title": "Phòng trọ 25m2 - Nguyễn Thị Thập- Q7",
+      "description": "Chào các bạn,\n\nThầy đã up nội dung bài thực hành số 2. Các bạn nhớ chuẩn bị bài thực hành ở nhà trước khi thực hành trên lớp.\n\nChú ý: Bài thực hành này sẽ nộp vào cuối giờ để chấm điểm nhé.",
+      "thumbnail": "",
+      "comments": []
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "60a13798c581111b08ae85c4"
+  },
+  "name": "Phòng Công tác học sinh sinh viên (CTHSSV)",
+  "role": [
+    "Khoa Công nghệ thông tin",
+    "Khoa giáo dục quốc tế",
+    "Khoa Lao động công đoàn",
+    "Khoa Luật"
+  ],
+  "username": "cthssv",
+  "password": "$2b$10$OcPYzQPPK9mbpnHAyVlUqewvvx8ARqMVgUoFCNaekdRMHSGMU.unO",
+  "avatar": "/public/img/lecture.png",
+  "posts": [
+    {
+      "_id": {
+        "$oid": "60a137bfc581111b08ae85c5"
+      },
+      "createdAt": 1621178303965,
+      "video": null,
+      "title": "Báo cáo cuối kỳ.",
+      "description": "Sinh viên làm và nộp báo cáo cuối học kỳ của môn phương pháp tính.\nDanh sách phân công và nội dung đề tài xem trong các file hướng dẫn.\nHạn nộp: Trước ngày 1/6/2021.",
+      "thumbnail": "",
+      "comments": []
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "60a1383bc581111b08ae85c7"
+  },
+  "name": "Trung tâm phát triển Khoa học quản lý và Ứng dụng công nghệ (ATEM)",
+  "role": [
+    "Khoa Quản trị kinh doanh",
+    "Khoa Lao động công đoàn",
+    "Khoa Luật",
+    "Khoa Môi trường và bảo hộ lao động",
+    "Khoa Mỹ thuật công nghiệp",
+    "Khoa Tài chính ngân hàng",
+    "Khoa giáo dục quốc tế"
+  ],
+  "username": "khoahoc",
+  "password": "$2b$10$X8Kep499ZsbSq1WFYd59n.Nr0mH1tWFszuwiaJNg3jSyIH320cEbu",
+  "avatar": "/public/img/lecture.png",
+  "posts": [
+    {
+      "_id": {
+        "$oid": "60a1386ac581111b08ae85c8"
+      },
+      "createdAt": 1621178474612,
+      "video": null,
+      "title": "Thông báo lịch học bù phương pháp tính.",
+      "description": "Theo lịch của nhà trường thì môn Phương pháp tính kết thúc tuần rồi, nhưng do lớp vẫn còn thiếu 1 buổi học lúc trước tết nên lớp sẽ học bù vào ngày thứ 2 tuần sau,  10/5/2021. Buổi học bù sẽ có 1 bài kiểm tra để lấy 5% điểm quá trình.\nGiờ học vẫn như cũ, phòng học thầy sẽ thông báo sau. \nMôn học sẽ làm báo cáo cuối kỳ, thầy sẽ thông báo đề tài trong 1-2 ngày tới.\nTrân trọng.\nThắng.",
+      "thumbnail": "",
+      "comments": []
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "60a14055aaa82b465491eaa9"
+  },
+  "email": "51800747@student.tdtu.edu.vn",
+  "name": "Đoàn Nguyễn Văn Hậu",
+  "avatar": "https://lh3.googleusercontent.com/a/AATXAJx1ELzMs3GLetIN6Y0SeygtSQZlGtWH9MSsStcC=s96-c",
+  "mssv": "51800747",
+  "faculty": "",
+  "class": "",
+  "posts": []
+}]

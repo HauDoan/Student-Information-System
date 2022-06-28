@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Ajax create Post</title>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <!-- <script type="text/javascript" src="//www.turnjs.com/lib/turn.min.js "></script> -->
+    <!-- <script src="/validator/main.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="/css/main.css" rel="stylesheet" type="text/css">
+
+    
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous">
+    </script> -->
+</head>
+
+<body>
+    <form id="signup"  action="/api/posts"method="POST">
+        <textarea name="desc" id="desc" cols="30" rows="10"></textarea>
+        <button class="post">Post</button>
+        
+    </form>
+    <button id="load">load</button>
+ 
+    <div class="timeline">
+
+        <p id="timeline">
+            <a href="/logout">Sign out</a>
+           <%= user.name%>
+           <%= user.id%>
+           <%= user.email%>
+           <img src="<%=user.picture%>" alt="">
+        <table id="table">
+            <tbody id="tbody">
+            </tbody>
+        </table>
+    
+        </p>
+    </div>
+    
+    <div class="share">
+
+        <div class="shareWrapper">
+
+            <div class="shareTop">
+                <img src="/picture.jpg"class="shareProfileImg" alt="">
+                <input type="text"placeholder="What's in your mind" class="shareInput">
+            </div>
+            <hr class="shareHr">
+
+
+
+            <div class="shareBottom">
+                <div class="shareOptions">
+                    <div class="shareOption">
+                        <i class="fas shareIcon fa-photo-video"></i>
+                        <span class="shareOptionText">Photo or video</span>
+                    </div>
+                </div>
+
+                <div class="shareOptions">
+                    <div class="shareOption">
+                        <i class="fas shareIcon fa-tags"></i>
+                        <span class="shareOptionText">Tag</span>
+                    </div>
+                </div>
+
+                <div class="shareOptions">
+                    <div class="shareOption">
+                        <i class="fas shareIcon fa-map-marker-alt"></i>
+                        <span class="shareOptionText">Location</span>
+                    </div>
+                </div>
+
+                <div class="shareOptions">
+                    <div class="shareOption">
+                        <i class="fas shareIcon fa-grin-alt"></i>
+
+                        <span class="shareOptionText">Feelings</span>
+                    </div>
+                </div>
+
+                <button class="shareButton">Share</button>
+            </div>
+
+            <div class="post">
+                <div class="postWrapper">
+                    <div class="postTop">
+                        <div class="postTopLeft">
+                            <img class="postProfileImg" src="/picture.jpg" alt="">
+                            <span class="postUsername">NguyenHau</span>
+                            <span class="postDate">5 mins ago</span>
+                        </div>
+                        <div class="postTopRight">
+
+                        </div>
+                    </div>
+                    <div class="postCenter">
+                        <span class="postText">Hello my old f!! </span>
+                        <img src="/profile.jpg" alt="">
+                    </div>
+                    
+                    <div class="postBottom">
+                        <div class="postBottomLeft">
+                            <img class="likeIcon" src="/picture.jpg" alt="">
+                            <img class="likeIcon" src="/picture.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+
+    </div>
+</body>
+<script>
+    // $(document).ready(() => {
+
+        //POST 
+            // $(() => {
+            // const $form = $('#signup')
+
+            // $form.on('submit', handleSignup)
+            // let btnLoad;
+            // let tbody;
+            // tbody=document.getElementById('tbody')
+            // btnLoad=document.getElementById('load')
+            // btnLoad.addEventListener('click',function()
+            // {
+              
+            // })
+            // function loadPost()
+            // {
+            //     let xhr=new XMLHttpRequest();
+            //     xhr.addEventListener('load',e=>
+            //     {
+
+            //         let json=xhr.response;
+            //         // let post=json.data;
+            //         tbody.innerHTML='';
+            //         json.forEach(e => {
+            //             let tr=document.createElement('tr')
+
+            //             let td1=document.createElement('td')
+            //             let td2=document.createElement('td')
+            //             let td3=document.createElement('td')
+
+            //             td1.innerHTML=e.desc;
+            //             td2.innerHTML=e.createdAt;
+            //             td3.innerHTML=e.updatedAt;
+
+            //             tr.appendChild(td1);
+            //             tr.appendChild(td2);
+            //             tr.appendChild(td3);
+
+            //             tbody.appendChild(tr);
+
+            //         });
+            //         // console.log(json[0]);
+            //     })
+            //     xhr.open('GET','http://localhost:9090/api/posts',true);
+            //     xhr.responseType='json';
+            //     xhr.send();
+            // }
+            // function handleSignup (e) {
+            //     e.preventDefault()
+
+            //     const options = {
+            //     method: $form.attr('method'),
+            //     url: $form.attr('action'),
+            //     data: $form.serialize()
+            //     }
+
+            //     $.ajax(options).done(response => {
+            //     console.log(response)
+            //     loadPost();
+            //     })
+            // }
+            // })
+    // })
+
+        //test
+        
+            // let data = new FormData();
+            // data.set('user', 'person');
+            // data.set('pwd', 'password');
+            // data.set('organization', 'place');
+            // data.set('requiredkey', 'key');
+            // for (var pair of data.entries())
+            // {
+            // console.log(pair[0]+ ', '+ pair[1]); 
+            // }
+            // let xhr = new XMLHttpRequest();
+            // xhr.open('POST', 'http://localhost:9090/api/posts', true);
+            // // xhr.setRequestHeader('Content-Type', 'multipart/form-data; boundary=--WebKitFormBoundary9rntuVzldIBHkILv');
+            // xhr.onreadystatechange = function() {//Call a function when the state changes.
+
+            // if(xhr.readyState == 4 && xhr.status == 200) {
+            //     alert(JSON.stringify(xhr.responseText));
+            // }
+            // }
+            // xhr.send(data.serialize());
+
+    
+
+            // $.ajax
+            // var fd = new FormData();
+            // fd.set('file', '123');
+            // var result = Object.keys(form).map((key) => [Number(key), obj[key]]);
+            // var markers = [{ "position": "128.3657142857143", "markerPosition": "7" },
+            //    { "position": "235.1944023323615", "markerPosition": "19" },
+            //    { "position": "42.5978231292517", "markerPosition": "-3" },{"content":content}];
+            //    console.log(markers)
+            // $.ajax({
+            //     url: 'http://localhost:9090/api/posts',
+            //     type: 'post',
+            //     data: fd.serialize(),
+            //     // contentType: "application/json; charset=utf-8",
+            //     // dataType: "json",
+            //     success: function (data) { alert(JSON.stringify(data)); },
+            //     error: function (errMsg) {
+            //         alert(errMsg);
+            //     }
+            // });
+                        //     const options = {
+            //     method: $form.attr('method'),
+            //     url: $form.attr('action'),
+            //     data: $form.serialize()
+            //     }
+
+            //     $.ajax(options).done(response => {
+            //     console.log(response)
+            //     })
+        // })
+</script>
+
+</html>

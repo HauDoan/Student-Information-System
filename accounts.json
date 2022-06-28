@@ -1,0 +1,70 @@
+[{
+  "_id": {
+    "$oid": "61d840a38714f339ed1d4c09"
+  },
+  "name": "Hau Nguyen",
+  "username": "knminfairy@gmail.com",
+  "email": "knminfairy@gmail.com",
+  "avatar": "https://lh3.googleusercontent.com/a-/AOh14GjNMFANsROYLO4BgzHTwNVb8OrMuAGzzXLndr4qEg=s96-c",
+  "role": [],
+  "posts": [
+    {
+      "user": {
+        "name": "Hau Nguyen",
+        "avatar": "https://lh3.googleusercontent.com/a-/AOh14GjNMFANsROYLO4BgzHTwNVb8OrMuAGzzXLndr4qEg=s96-c",
+        "role": "Sinh viên"
+      },
+      "description": "Xin chao mn nha ",
+      "thumbnail": "",
+      "video": "",
+      "createdAt": "Jan 8, 2022 10:58 AM",
+      "comments": [],
+      "_id": {
+        "$oid": "61d90bec36785415045513bd"
+      },
+      "__v": 0
+    },
+    {
+      "user": {
+        "name": "Hau Nguyen",
+        "avatar": "https://lh3.googleusercontent.com/a-/AOh14GjNMFANsROYLO4BgzHTwNVb8OrMuAGzzXLndr4qEg=s96-c",
+        "role": "Sinh viên"
+      },
+      "description": "Xin chao mn",
+      "thumbnail": "",
+      "video": "",
+      "createdAt": "Jan 8, 2022 10:59 AM",
+      "comments": [],
+      "_id": {
+        "$oid": "61d90c0836785415045513c4"
+      },
+      "__v": 0
+    }
+  ],
+  "isAdmin": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61d8fabf335f5c2c5fee55ac"
+  },
+  "name": "Đoàn Hậu",
+  "username": "knminfairy1@gmail.com",
+  "email": "knminfairy1@gmail.com",
+  "avatar": "https://lh3.googleusercontent.com/a/AATXAJxngoBIBODgGfYLho_bMypnMTOqwKKWaoLy04gD=s96-c",
+  "role": [],
+  "posts": [],
+  "isAdmin": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61d900d005394300bd000617"
+  },
+  "name": "Đoàn Nguyễn Văn Hậu",
+  "username": "51800747@student.tdtu.edu.vn",
+  "email": "51800747@student.tdtu.edu.vn",
+  "avatar": "https://lh3.googleusercontent.com/a/AATXAJx1ELzMs3GLetIN6Y0SeygtSQZlGtWH9MSsStcC=s96-c",
+  "role": [],
+  "posts": [],
+  "isAdmin": false,
+  "__v": 0
+}]
