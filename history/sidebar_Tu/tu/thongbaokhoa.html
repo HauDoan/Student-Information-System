@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/styles2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <input type="checkbox" id="trang_check">
+    <nav class="nav"> 
+        <header >
+            <label for="trang_check">
+                <i class="fas fa-bars" id="sidebar_btn"></i>
+            </label>
+            <div class="left_area">
+                <h3>THÔNG <span>BÁO</span></h3>
+            </div>
+            <div class="right_area">
+                <a href="#" class="logout_btn">Logout</a>
+            </div>
+        </header>
+    </nav>
+
+
+   <div id="wrapper">
+      <nav class="navbar-default navbar-static-side">
+         <div class="sidebar">
+            <center>
+                <div class="sidebar-profile">
+                    <img src="images/profile.jpg" alt="" class="profile_image">
+                    <div>Đoàn Nguyễn Văn Hậu</div>
+                    <div id="profile-email">knminfairy@gmail.com</div>
+                </div>
+               
+            </center>
+            <div class="iconList">
+    
+                <div class="circle">
+                    HN
+                </div>
+                <ul>
+                
+                    <li>
+                        <a class="trangchu"><i class="fa fa-home"></i><span title="Trang chủ">Trang chủ</span></a>
+                    </li>
+    
+                    <li>
+                        <a><i class="fas fa-list"></i><span title="Phân loại thông báo">Phân loại thông báo</span><span class="fas fa-chevron-left showList" ></span></a>
+    
+                        <ul class="listMessage">
+    
+                            <li>
+                                <a><i class="fas fa-users"></i><span title="Đơn vị">Đơn vị</span><span class="fas fa-chevron-left showList"></span></a>
+                            </li>
+    
+                            <li>
+                                <a><i class="fas fa-image"></i><span title="Chủ đề">Chủ đề</span><span class="fas fa-chevron-left showList"></span></a>
+                            </li>
+    
+                            <li>
+                                <a><i class="fas fa-globe"></i><span title="Tất cả thông báo">Tất cả thông báo</span></a>
+                            </li>
+    
+                        </ul> 
+                    </li>
+                </ul>
+                </a>
+                <a ><i class="fas fa-bullhorn"></i><span title="Cổng thông tin">Cổng thông tin</span><span class="fas fa-chevron-left showList" ></span>
+                </a>
+            </div>
+            <div class="logout-profile">
+                <a href="#"><i class="fas fa-sign-out-alt"></i><span>Logout</span></a>
+            </div>
+      </nav>
+
+      <div id="wrapper-page">
+         <div class="page-content">
+            <div class="page-content">
+               <div class="row">
+                  <div class="col-lg-12">
+                     <div class="portlet box">
+
+                        <div class="portlet-header">
+                           <div class="caption"> Danh sách phòng ban </div>
+                        </div>
+
+                        <div class="portlet-body">
+                          <div class="gallery-pages">
+                           <div class="row mix-grid">
+                              <div class=" mix photography" style="display: inline-block;margin-left: 11px;box-shadow: 1px 0px 7px #888888">
+                                 <div class="hover-effect1">
+                                         <!-- <div class="img img-1 btn-1" onclick="selectPhongBan(this)" id="SelectPhongBan-1"> -->
+                                          <div class="img img-1 btn-1" id="SelectPhongBan-1">
+                                             <div class="ImgWidthHeight"></div>
+                                                <div class="text-block">
+                                                      <span class="TenDonVi"> KHOA MỸ THUẬT CÔNG NGHIỆP</span>
+                                                </div>
+                                                <div class="centered arrow bounce">
+                                                   <label class="img-circle BorderNotification">2</label>
+                                                </div>
+                                         </div>
+                                         <div class="info">
+                                         </div>
+                                 </div>
+                             </div>
+                           <div class=" mix photography" style="display: inline-block;margin-left: 11px;box-shadow: 1px 0px 7px #888888">
+                                 <div class="hover-effect1">
+                                       <!-- <div class="img img-1 btn-1" onclick="selectPhongBan(this)" id="SelectPhongBan-1"> -->
+                                          <div class="img img-1 btn-1" id="SelectPhongBan-1">
+                                             <div class="ImgWidthHeight"></div>
+                                                <div class="text-block">
+                                                      <span class="TenDonVi"> KHOA MỸ THUẬT CÔNG NGHIỆP</span>
+                                                </div>
+                                                <div class="centered arrow bounce">
+                                                   <label class="img-circle BorderNotification">2</label>
+                                                </div>
+                                       </div>
+                                       <div class="info">
+                                       </div>
+                                 </div>
+                           </div>
+                           <div class=" mix photography" style="display: inline-block;margin-left: 11px;box-shadow: 1px 0px 7px #888888">
+                              <div class="hover-effect1">
+                                    <!-- <div class="img img-1 btn-1" onclick="selectPhongBan(this)" id="SelectPhongBan-1"> -->
+                                       <div class="img img-1 btn-1" id="SelectPhongBan-1">
+                                          <div class="ImgWidthHeight"></div>
+                                             <div class="text-block">
+                                                   <span class="TenDonVi"> KHOA MỸ THUẬT CÔNG NGHIỆP</span>
+                                             </div>
+                                             <div class="centered arrow bounce">
+                                                <label class="img-circle BorderNotification">2</label>
+                                             </div>
+                                    </div>
+                                    <div class="info">
+                                    </div>
+                              </div>
+                           </div>
+                           <div class=" mix photography" style="display: inline-block;margin-left: 11px;box-shadow: 1px 0px 7px #888888">
+                              <div class="hover-effect1">
+                                    <!-- <div class="img img-1 btn-1" onclick="selectPhongBan(this)" id="SelectPhongBan-1"> -->
+                                       <div class="img img-1 btn-1" id="SelectPhongBan-1">
+                                          <div class="ImgWidthHeight"></div>
+                                             <div class="text-block">
+                                                   <span class="TenDonVi"> KHOA MỸ THUẬT CÔNG NGHIỆP</span>
+                                             </div>
+                                             <div class="centered arrow bounce">
+                                                <label class="img-circle BorderNotification">2</label>
+                                             </div>
+                                    </div>
+                                    <div class="info">
+                                    </div>
+                              </div>
+                           </div>
+                           <div class=" mix photography" style="display: inline-block;margin-left: 11px;box-shadow: 1px 0px 7px #888888">
+                              <div class="hover-effect1">
+                                    <!-- <div class="img img-1 btn-1" onclick="selectPhongBan(this)" id="SelectPhongBan-1"> -->
+                                       <div class="img img-1 btn-1" id="SelectPhongBan-1">
+                                          <div class="ImgWidthHeight"></div>
+                                             <div class="text-block">
+                                                   <span class="TenDonVi"> KHOA MỸ THUẬT CÔNG NGHIỆP</span>
+                                             </div>
+                                             <div class="centered arrow bounce">
+                                                <label class="img-circle BorderNotification">2</label>
+                                             </div>
+                                       </div>
+                                       <div class="info"></div>
+                              </div>
+                              </div>
+                              <div class=" mix photography" style="display: inline-block;margin-left: 11px;box-shadow: 1px 0px 7px #888888">
+                                 <div class="hover-effect1">
+                                       <!-- <div class="img img-1 btn-1" onclick="selectPhongBan(this)" id="SelectPhongBan-1"> -->
+                                          <div class="img img-1 btn-1" id="SelectPhongBan-1">
+                                             <div class="ImgWidthHeight"></div>
+                                                <div class="text-block">
+                                                      <span class="TenDonVi"> KHOA MỸ THUẬT CÔNG NGHIỆP</span>
+                                                </div>
+                                                <div class="centered arrow bounce">
+                                                   <label class="img-circle BorderNotification">2</label>
+                                                </div>
+                                          </div>
+                                          <div class="info"></div>
+                                 </div>
+                                 </div>
+                                 <div class=" mix photography" style="display: inline-block;margin-left: 11px;box-shadow: 1px 0px 7px #888888">
+                                    <div class="hover-effect1">
+                                          <!-- <div class="img img-1 btn-1" onclick="selectPhongBan(this)" id="SelectPhongBan-1"> -->
+                                             <div class="img img-1 btn-1" id="SelectPhongBan-1">
+                                                <div class="ImgWidthHeight"></div>
+                                                   <div class="text-block">
+                                                         <span class="TenDonVi"> KHOA MỸ THUẬT CÔNG NGHIỆP</span>
+                                                   </div>
+                                                   <div class="centered arrow bounce">
+                                                      <label class="img-circle BorderNotification">2</label>
+                                                   </div>
+                                             </div>
+                                             <div class="info"></div>
+                                    </div>
+                                    </div>
+                                    <div class=" mix photography" style="display: inline-block;margin-left: 11px;box-shadow: 1px 0px 7px #888888">
+                                       <div class="hover-effect1">
+                                             <!-- <div class="img img-1 btn-1" onclick="selectPhongBan(this)" id="SelectPhongBan-1"> -->
+                                                <div class="img img-1 btn-1" id="SelectPhongBan-1">
+                                                   <div class="ImgWidthHeight"></div>
+                                                      <div class="text-block">
+                                                            <span class="TenDonVi"> KHOA MỸ THUẬT CÔNG NGHIỆP</span>
+                                                      </div>
+                                                      <div class="centered arrow bounce">
+                                                         <label class="img-circle BorderNotification">2</label>
+                                                      </div>
+                                                </div>
+                                                <div class="info"></div>
+                                       </div>
+                                       </div>
+                                       <div class=" mix photography" style="display: inline-block;margin-left: 11px;box-shadow: 1px 0px 7px #888888">
+                                          <div class="hover-effect1">
+                                                <!-- <div class="img img-1 btn-1" onclick="selectPhongBan(this)" id="SelectPhongBan-1"> -->
+                                                   <div class="img img-1 btn-1" id="SelectPhongBan-1">
+                                                      <div class="ImgWidthHeight"></div>
+                                                         <div class="text-block">
+                                                               <span class="TenDonVi"> KHOA MỸ THUẬT CÔNG NGHIỆP</span>
+                                                         </div>
+                                                         <div class="centered arrow bounce">
+                                                            <label class="img-circle BorderNotification">2</label>
+                                                         </div>
+                                                   </div>
+                                                   <div class="info"></div>
+                                          </div>
+                                          </div>
+                                          <div class=" mix photography" style="display: inline-block;margin-left: 11px;box-shadow: 1px 0px 7px #888888">
+                                             <div class="hover-effect1">
+                                                   <!-- <div class="img img-1 btn-1" onclick="selectPhongBan(this)" id="SelectPhongBan-1"> -->
+                                                      <div class="img img-1 btn-1" id="SelectPhongBan-1">
+                                                         <div class="ImgWidthHeight"></div>
+                                                            <div class="text-block">
+                                                                  <span class="TenDonVi"> KHOA MỸ THUẬT CÔNG NGHIỆP</span>
+                                                            </div>
+                                                            <div class="centered arrow bounce">
+                                                               <label class="img-circle BorderNotification">2</label>
+                                                            </div>
+                                                      </div>
+                                                      <div class="info"></div>
+                                             </div>
+                                             </div>
+                                             <div class=" mix photography" style="display: inline-block;margin-left: 11px;box-shadow: 1px 0px 7px #888888">
+                                                <div class="hover-effect1">
+                                                      <!-- <div class="img img-1 btn-1" onclick="selectPhongBan(this)" id="SelectPhongBan-1"> -->
+                                                         <div class="img img-1 btn-1" id="SelectPhongBan-1">
+                                                            <div class="ImgWidthHeight"></div>
+                                                               <div class="text-block">
+                                                                     <span class="TenDonVi"> KHOA MỸ THUẬT CÔNG NGHIỆP</span>
+                                                               </div>
+                                                               <div class="centered arrow bounce">
+                                                                  <label class="img-circle BorderNotification">2</label>
+                                                               </div>
+                                                         </div>
+                                                         <div class="info"></div>
+                                                </div>
+                                                </div>
+                                                <div class=" mix photography" style="display: inline-block;margin-left: 11px;box-shadow: 1px 0px 7px #888888">
+                                                   <div class="hover-effect1">
+                                                         <!-- <div class="img img-1 btn-1" onclick="selectPhongBan(this)" id="SelectPhongBan-1"> -->
+                                                            <div class="img img-1 btn-1" id="SelectPhongBan-1">
+                                                               <div class="ImgWidthHeight"></div>
+                                                                  <div class="text-block">
+                                                                        <span class="TenDonVi"> KHOA MỸ THUẬT CÔNG NGHIỆP</span>
+                                                                  </div>
+                                                                  <div class="centered arrow bounce">
+                                                                     <label class="img-circle BorderNotification">2</label>
+                                                                  </div>
+                                                            </div>
+                                                            <div class="info"></div>
+                                                   </div>
+                                                   </div>
+                                                   <div class=" mix photography" style="display: inline-block;margin-left: 11px;box-shadow: 1px 0px 7px #888888">
+                                                      <div class="hover-effect1">
+                                                            <!-- <div class="img img-1 btn-1" onclick="selectPhongBan(this)" id="SelectPhongBan-1"> -->
+                                                               <div class="img img-1 btn-1" id="SelectPhongBan-1">
+                                                                  <div class="ImgWidthHeight"></div>
+                                                                     <div class="text-block">
+                                                                           <span class="TenDonVi"> KHOA MỸ THUẬT CÔNG NGHIỆP</span>
+                                                                     </div>
+                                                                     <div class="centered arrow bounce">
+                                                                        <label class="img-circle BorderNotification">2</label>
+                                                                     </div>
+                                                               </div>
+                                                               <div class="info"></div>
+                                                      </div>
+                                                      </div>
+                                                      <div class=" mix photography" style="display: inline-block;margin-left: 11px;box-shadow: 1px 0px 7px #888888">
+                                                         <div class="hover-effect1">
+                                                               <!-- <div class="img img-1 btn-1" onclick="selectPhongBan(this)" id="SelectPhongBan-1"> -->
+                                                                  <div class="img img-1 btn-1" id="SelectPhongBan-1">
+                                                                     <div class="ImgWidthHeight"></div>
+                                                                        <div class="text-block">
+                                                                              <span class="TenDonVi"> KHOA MỸ THUẬT CÔNG NGHIỆP</span>
+                                                                        </div>
+                                                                        <div class="centered arrow bounce">
+                                                                           <label class="img-circle BorderNotification">2</label>
+                                                                        </div>
+                                                                  </div>
+                                                                  <div class="info"></div>
+                                                         </div>
+                                                         </div>
+                                                         <div class=" mix photography" style="display: inline-block;margin-left: 11px;box-shadow: 1px 0px 7px #888888">
+                                                            <div class="hover-effect1">
+                                                                  <!-- <div class="img img-1 btn-1" onclick="selectPhongBan(this)" id="SelectPhongBan-1"> -->
+                                                                     <div class="img img-1 btn-1" id="SelectPhongBan-1">
+                                                                        <div class="ImgWidthHeight"></div>
+                                                                           <div class="text-block">
+                                                                                 <span class="TenDonVi"> KHOA MỸ THUẬT CÔNG NGHIỆP</span>
+                                                                           </div>
+                                                                           <div class="centered arrow bounce">
+                                                                              <label class="img-circle BorderNotification">2</label>
+                                                                           </div>
+                                                                     </div>
+                                                                     <div class="info"></div>
+                                                            </div>
+                                                            </div>
+                                                            <div class=" mix photography" style="display: inline-block;margin-left: 11px;box-shadow: 1px 0px 7px #888888">
+                                                               <div class="hover-effect1">
+                                                                     <!-- <div class="img img-1 btn-1" onclick="selectPhongBan(this)" id="SelectPhongBan-1"> -->
+                                                                        <div class="img img-1 btn-1" id="SelectPhongBan-1">
+                                                                           <div class="ImgWidthHeight"></div>
+                                                                              <div class="text-block">
+                                                                                    <span class="TenDonVi"> KHOA MỸ THUẬT CÔNG NGHIỆP</span>
+                                                                              </div>
+                                                                              <div class="centered arrow bounce">
+                                                                                 <label class="img-circle BorderNotification">2</label>
+                                                                              </div>
+                                                                        </div>
+                                                                        <div class="info"></div>
+                                                               </div>
+                                                               </div>
+                                                               <div class=" mix photography" style="display: inline-block;margin-left: 11px;box-shadow: 1px 0px 7px #888888">
+                                                                  <div class="hover-effect1">
+                                                                        <!-- <div class="img img-1 btn-1" onclick="selectPhongBan(this)" id="SelectPhongBan-1"> -->
+                                                                           <div class="img img-1 btn-1" id="SelectPhongBan-1">
+                                                                              <div class="ImgWidthHeight"></div>
+                                                                                 <div class="text-block">
+                                                                                       <span class="TenDonVi"> KHOA MỸ THUẬT CÔNG NGHIỆP</span>
+                                                                                 </div>
+                                                                                 <div class="centered arrow bounce">
+                                                                                    <label class="img-circle BorderNotification">2</label>
+                                                                                 </div>
+                                                                           </div>
+                                                                           <div class="info"></div>
+                                                                  </div>
+                                                                  </div>
+                                                                  <div class=" mix photography" style="display: inline-block;margin-left: 11px;box-shadow: 1px 0px 7px #888888">
+                                                                     <div class="hover-effect1">
+                                                                           <!-- <div class="img img-1 btn-1" onclick="selectPhongBan(this)" id="SelectPhongBan-1"> -->
+                                                                              <div class="img img-1 btn-1" id="SelectPhongBan-1">
+                                                                                 <div class="ImgWidthHeight"></div>
+                                                                                    <div class="text-block">
+                                                                                          <span class="TenDonVi"> KHOA MỸ THUẬT CÔNG NGHIỆP</span>
+                                                                                    </div>
+                                                                                    <div class="centered arrow bounce">
+                                                                                       <label class="img-circle BorderNotification">2</label>
+                                                                                    </div>
+                                                                              </div>
+                                                                              <div class="info"></div>
+                                                                     </div>
+                                                                     </div>
+                                                                     <div class=" mix photography" style="display: inline-block;margin-left: 11px;box-shadow: 1px 0px 7px #888888">
+                                                                        <div class="hover-effect1">
+                                                                              <!-- <div class="img img-1 btn-1" onclick="selectPhongBan(this)" id="SelectPhongBan-1"> -->
+                                                                                 <div class="img img-1 btn-1" id="SelectPhongBan-1">
+                                                                                    <div class="ImgWidthHeight"></div>
+                                                                                       <div class="text-block">
+                                                                                             <span class="TenDonVi"> KHOA MỸ THUẬT CÔNG NGHIỆP</span>
+                                                                                       </div>
+                                                                                       <div class="centered arrow bounce">
+                                                                                          <label class="img-circle BorderNotification">2</label>
+                                                                                       </div>
+                                                                                 </div>
+                                                                                 <div class="info"></div>
+                                                                        </div>
+                                                                        </div>
+                                                                        <div class=" mix photography" style="display: inline-block;margin-left: 11px;box-shadow: 1px 0px 7px #888888">
+                                                                           <div class="hover-effect1">
+                                                                                 <!-- <div class="img img-1 btn-1" onclick="selectPhongBan(this)" id="SelectPhongBan-1"> -->
+                                                                                    <div class="img img-1 btn-1" id="SelectPhongBan-1">
+                                                                                       <div class="ImgWidthHeight"></div>
+                                                                                          <div class="text-block">
+                                                                                                <span class="TenDonVi"> KHOA MỸ THUẬT CÔNG NGHIỆP</span>
+                                                                                          </div>
+                                                                                          <div class="centered arrow bounce">
+                                                                                             <label class="img-circle BorderNotification">2</label>
+                                                                                          </div>
+                                                                                    </div>
+                                                                                    <div class="info"></div>
+                                                                           </div>
+                                                                           </div>
+                                                                           <div class=" mix photography" style="display: inline-block;margin-left: 11px;box-shadow: 1px 0px 7px #888888">
+                                                                              <div class="hover-effect1">
+                                                                                    <!-- <div class="img img-1 btn-1" onclick="selectPhongBan(this)" id="SelectPhongBan-1"> -->
+                                                                                       <div class="img img-1 btn-1" id="SelectPhongBan-1">
+                                                                                          <div class="ImgWidthHeight"></div>
+                                                                                             <div class="text-block">
+                                                                                                   <span class="TenDonVi"> KHOA MỸ THUẬT CÔNG NGHIỆP</span>
+                                                                                             </div>
+                                                                                             <div class="centered arrow bounce">
+                                                                                                <label class="img-circle BorderNotification">2</label>
+                                                                                             </div>
+                                                                                       </div>
+                                                                                       <div class="info"></div>
+                                                                              </div>
+                                                                              </div>
+                                                                              <div class=" mix photography" style="display: inline-block;margin-left: 11px;box-shadow: 1px 0px 7px #888888">
+                                                                                 <div class="hover-effect1">
+                                                                                       <!-- <div class="img img-1 btn-1" onclick="selectPhongBan(this)" id="SelectPhongBan-1"> -->
+                                                                                          <div class="img img-1 btn-1" id="SelectPhongBan-1">
+                                                                                             <div class="ImgWidthHeight"></div>
+                                                                                                <div class="text-block">
+                                                                                                      <span class="TenDonVi"> KHOA MỸ THUẬT CÔNG NGHIỆP</span>
+                                                                                                </div>
+                                                                                                <div class="centered arrow bounce">
+                                                                                                   <label class="img-circle BorderNotification">2</label>
+                                                                                                </div>
+                                                                                          </div>
+                                                                                          <div class="info"></div>
+                                                                                 </div>
+                                                                                 </div>
+                                                                                 <div class=" mix photography" style="display: inline-block;margin-left: 11px;box-shadow: 1px 0px 7px #888888">
+                                                                                    <div class="hover-effect1">
+                                                                                          <!-- <div class="img img-1 btn-1" onclick="selectPhongBan(this)" id="SelectPhongBan-1"> -->
+                                                                                             <div class="img img-1 btn-1" id="SelectPhongBan-1">
+                                                                                                <div class="ImgWidthHeight"></div>
+                                                                                                   <div class="text-block">
+                                                                                                         <span class="TenDonVi"> KHOA MỸ THUẬT CÔNG NGHIỆP</span>
+                                                                                                   </div>
+                                                                                                   <div class="centered arrow bounce">
+                                                                                                      <label class="img-circle BorderNotification">2</label>
+                                                                                                   </div>
+                                                                                             </div>
+                                                                                             <div class="info"></div>
+                                                                                    </div>
+                                                                                    </div>
+                                                                                    <div class=" mix photography" style="display: inline-block;margin-left: 11px;box-shadow: 1px 0px 7px #888888">
+                                                                                       <div class="hover-effect1">
+                                                                                             <!-- <div class="img img-1 btn-1" onclick="selectPhongBan(this)" id="SelectPhongBan-1"> -->
+                                                                                                <div class="img img-1 btn-1" id="SelectPhongBan-1">
+                                                                                                   <div class="ImgWidthHeight"></div>
+                                                                                                      <div class="text-block">
+                                                                                                            <span class="TenDonVi"> KHOA MỸ THUẬT CÔNG NGHIỆP</span>
+                                                                                                      </div>
+                                                                                                      <div class="centered arrow bounce">
+                                                                                                         <label class="img-circle BorderNotification">2</label>
+                                                                                                      </div>
+                                                                                                </div>
+                                                                                                <div class="info"></div>
+                                                                                       </div>
+                                                                                       </div>
+                                                                                       <div class=" mix photography" style="display: inline-block;margin-left: 11px;box-shadow: 1px 0px 7px #888888">
+                                                                                          <div class="hover-effect1">
+                                                                                                <!-- <div class="img img-1 btn-1" onclick="selectPhongBan(this)" id="SelectPhongBan-1"> -->
+                                                                                                   <div class="img img-1 btn-1" id="SelectPhongBan-1">
+                                                                                                      <div class="ImgWidthHeight"></div>
+                                                                                                         <div class="text-block">
+                                                                                                               <span class="TenDonVi"> KHOA MỸ THUẬT CÔNG NGHIỆP</span>
+                                                                                                         </div>
+                                                                                                         <div class="centered arrow bounce">
+                                                                                                            <label class="img-circle BorderNotification">2</label>
+                                                                                                         </div>
+                                                                                                   </div>
+                                                                                                   <div class="info"></div>
+                                                                                          </div>
+                                                                                          </div>
+                                                                                          <div class=" mix photography" style="display: inline-block;margin-left: 11px;box-shadow: 1px 0px 7px #888888">
+                                                                                             <div class="hover-effect1">
+                                                                                                   <!-- <div class="img img-1 btn-1" onclick="selectPhongBan(this)" id="SelectPhongBan-1"> -->
+                                                                                                      <div class="img img-1 btn-1" id="SelectPhongBan-1">
+                                                                                                         <div class="ImgWidthHeight"></div>
+                                                                                                            <div class="text-block">
+                                                                                                                  <span class="TenDonVi"> KHOA MỸ THUẬT CÔNG NGHIỆP</span>
+                                                                                                            </div>
+                                                                                                            <div class="centered arrow bounce">
+                                                                                                               <label class="img-circle BorderNotification">2</label>
+                                                                                                            </div>
+                                                                                                      </div>
+                                                                                                      <div class="info"></div>
+                                                                                             </div>
+                                                                                             </div>
+                                                                                             
+                            </div>
+                           </div>
+                          </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</body>
+</html>
+<script>
+   let a=0;
+$('.iconList a').click(function()
+{
+   if (a===0)
+   {
+       $('.iconList a:hover .showList').css('transform', 'rotate(-90deg)');
+       // $('.iconList a:hover').css('background-color','red');
+       a=1;
+
+   }
+   else 
+   {
+       a=0;
+       $('.iconList a:hover .showList').css('transform', 'rotate(0deg)');
+       // $('.iconList a:hover').css('background-color','#33485c');
+       
+   }
+});
+
+</script>
