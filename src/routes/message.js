@@ -22,5 +22,4 @@ Router.post('/', async (req,res)=>
     }
 
 })
-Router
 export default Router;

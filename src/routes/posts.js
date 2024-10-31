@@ -2,8 +2,8 @@
 import express from 'express'
 import multer from 'multer'
 import moment from 'moment'
-import Post from '../models/PostModel.js'
-import User from '../models/UserModel.js'
+import Post from '../models/postModel.js'
+import User from '../models/accountModel.js'
 
 const Router = express()
 // const upload=multer({fileFilter: (req,file,callback)=>{
@@ -53,13 +53,11 @@ Router.get("/", postController.post_index)
 //create post 
 Router.post("/", async (req, res) => {
     const id = req.cookies['session-secret']
-    const idPost = []
     const user = await User.findById(id)
     let uploader = upload.single('image')
     uploader(req, res, err => {
         let image = req.file
         let post = req.body
-
         if (!image) {
             const newPost = new Post({ description: post.description, user: { name: user.name, avatar: user.avatar, email: user.email }, thumbnail: '', video: post.video, createdAt: moment().format('lll'), comments: [] })
             newPost.save();
@@ -70,10 +68,8 @@ Router.post("/", async (req, res) => {
         }
         else {
             let path = image.path;
-
             const newPost = new Post({ description: post.description, user: { name: user.name, avatar: user.avatar, email: user.email }, thumbnail: path.slice(7), video: post.video, createdAt: moment().format('lll'), comments: [], updatedAt: new Date() })
             newPost.save();
-            //  user.updateOne({$push:{posts: newPost}})
             res.send({ 'data': newPost })
         }
 

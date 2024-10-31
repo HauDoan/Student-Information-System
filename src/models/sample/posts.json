@@ -7,12 +7,12 @@
       "$oid": "60a131920d606948dc30e59a"
     },
     "name": "admin",
-    "avatar": "/public/img/lecture.png",
+    "avatar": "img/lecture.png",
     "role": "Khoa Công nghệ thông tin"
   },
   "title": "Điểm 10% và cấm thi",
   "description": "Các em xem file đính kèm để biết số buổi vắng và điểm 10% của mình, mọi thắc mắc gửi mail cho thầy từ nay đến hết ngày 14/05/2021, sau thời hạn trên mọi thắc mắc sẽ không được giải quyết.\nLưu ý:\n1. Các ngày có ghi số \"1\" là có mặt ngược lại là vắng\n2. Những bạn vắng trên 3 buổi sẽ bị cấm thi (cấm báo cáo cuối kỳ)\n3. Những trường hợp đã xin phép thầy thì reply email xin phép để thầy cập nhật các buổi có phép vào danh sách.\n4. Các bài làm trên lớp nộp giấy trắng hoặc nộp 1/4 tờ giấy đôi xem như 0đ bài đó (tương đương 1 buổi vắng)",
-  "thumbnail": "public\\my-uploads\\moy-sosed-totoro-totoro-blue_1621176798402.jpeg",
+  "thumbnail": "my-uploads\\moy-sosed-totoro-totoro-blue_1621176798402.jpeg",
   "video": null,
   "createdAt": 1621176798408,
   "comments": []
@@ -25,7 +25,7 @@
       "$oid": "60a131920d606948dc30e59a"
     },
     "name": "admin",
-    "avatar": "/public/img/lecture.png",
+    "avatar": "img/lecture.png",
     "role": "Phòng khảo thí và kiểm định chất lượng"
   },
   "title": "Nộp đồ án cuối kỳ",
@@ -39,7 +39,7 @@
       "text": "dsfdsfds",
       "createdAt": 1621177449720,
       "name": "admin",
-      "avatar": "/public/img/lecture.png"
+      "avatar": "img/lecture.png"
     }
   ]
 },{
@@ -87,7 +87,7 @@
       "$oid": "60a1326c0d606948dc30e59d"
     },
     "name": "Khoa Công nghệ thông tin",
-    "avatar": "/public/img/lecture.png",
+    "avatar": "img/lecture.png",
     "role": "Khoa Công nghệ thông tin"
   },
   "title": "Học online ngày 01/03/2021",
@@ -105,7 +105,7 @@
       "$oid": "60a132750d606948dc30e59e"
     },
     "name": "Khoa Luật",
-    "avatar": "/public/img/lecture.png",
+    "avatar": "img/lecture.png",
     "role": "Khoa Luật"
   },
   "title": "Học online ngày 22/02/2021",
@@ -123,7 +123,7 @@
       "$oid": "60a132940d606948dc30e5a0"
     },
     "name": "TDT Creative Language Center",
-    "avatar": "/public/img/lecture.png",
+    "avatar": "img/lecture.png",
     "role": "Khoa Môi trường và bảo hộ lao động"
   },
   "title": "Học Tiếng Anh",
@@ -141,7 +141,7 @@
       "$oid": "60a1326c0d606948dc30e59d"
     },
     "name": "Khoa Công nghệ thông tin",
-    "avatar": "/public/img/lecture.png",
+    "avatar": "img/lecture.png",
     "role": "Khoa Công nghệ thông tin"
   },
   "title": "Thực hành",
@@ -159,7 +159,7 @@
       "$oid": "60a1326c0d606948dc30e59d"
     },
     "name": "Khoa Công nghệ thông tin",
-    "avatar": "/public/img/lecture.png",
+    "avatar": "img/lecture.png",
     "role": "Khoa Công nghệ thông tin"
   },
   "title": "Học online ngày 22/02/2021",
@@ -177,7 +177,7 @@
       "$oid": "60a1326c0d606948dc30e59d"
     },
     "name": "Khoa Công nghệ thông tin",
-    "avatar": "/public/img/lecture.png",
+    "avatar": "img/lecture.png",
     "role": "Khoa Công nghệ thông tin"
   },
   "title": "QT2",
@@ -195,7 +195,7 @@
       "$oid": "60a1326c0d606948dc30e59d"
     },
     "name": "Khoa Công nghệ thông tin",
-    "avatar": "/public/img/lecture.png",
+    "avatar": "img/lecture.png",
     "role": "Khoa Công nghệ thông tin"
   },
   "title": "Phòng trọ 25m2 - Nguyễn Thị Thập- Q7",
@@ -213,7 +213,7 @@
       "$oid": "60a1373ec581111b08ae85c1"
     },
     "name": "Khoa Điện – Điện tử",
-    "avatar": "/public/img/lecture.png",
+    "avatar": "img/lecture.png",
     "role": "Khoa Luật"
   },
   "title": "Các bạn chú ý ngày mai chúng ta học online nhé. Meet link thầy đã tạo sẵn ở trên.",
@@ -231,7 +231,7 @@
       "$oid": "60a1373ec581111b08ae85c1"
     },
     "name": "Khoa Điện – Điện tử",
-    "avatar": "/public/img/lecture.png",
+    "avatar": "img/lecture.png",
     "role": "Khoa Môi trường và bảo hộ lao động"
   },
   "title": "Phòng trọ 25m2 - Nguyễn Thị Thập- Q7",
@@ -249,7 +249,7 @@
       "$oid": "60a13798c581111b08ae85c4"
     },
     "name": "Phòng Công tác học sinh sinh viên (CTHSSV)",
-    "avatar": "/public/img/lecture.png",
+    "avatar": "img/lecture.png",
     "role": "Khoa giáo dục quốc tế"
   },
   "title": "Báo cáo cuối kỳ.",
@@ -267,7 +267,7 @@
       "$oid": "60a1326c0d606948dc30e59d"
     },
     "name": "Khoa Công nghệ thông tin",
-    "avatar": "/public/img/lecture.png",
+    "avatar": "img/lecture.png",
     "role": "Khoa Công nghệ thông tin"
   },
   "title": "Thông báo học bù online.",
@@ -285,7 +285,7 @@
       "$oid": "60a1383bc581111b08ae85c7"
     },
     "name": "Trung tâm phát triển Khoa học quản lý và Ứng dụng công nghệ (ATEM)",
-    "avatar": "/public/img/lecture.png",
+    "avatar": "img/lecture.png",
     "role": "Khoa Quản trị kinh doanh"
   },
   "title": "Thông báo lịch học bù phương pháp tính.",

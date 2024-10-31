@@ -15,22 +15,22 @@ window.addEventListener('load', () => {
     });
   
 
-        $('.trangchu-nav-categoryMessage').click(function () {
-            $('nav .trangchu-nav-listMessage').toggleClass("show");
-            $('.trangchu-nav-categoryMessage').toggleClass("clicked");
-            $('.trangchu-nav-sidebarList .first').toggleClass("rotate");
+        $('.home-nav-categoryMessage').click(function () {
+            $('nav .home-nav-listMessage').toggleClass("show");
+            $('.home-nav-categoryMessage').toggleClass("clicked");
+            $('.home-nav-sidebarList .first').toggleClass("rotate");
         })
 
-        $('.trangchu-nav-infoMessage').click(function () {
-            $('nav .trangchu-nav-info_Message').toggleClass("show");
-            $('.trangchu-nav-sidebarList .second').toggleClass("rotate");
-            $('.trangchu-nav-infoMessage').toggleClass("clicked");
+        $('.home-nav-infoMessage').click(function () {
+            $('nav .home-nav-info_Message').toggleClass("show");
+            $('.home-nav-sidebarList .second').toggleClass("rotate");
+            $('.home-nav-infoMessage').toggleClass("clicked");
         })
 
         $('.donvi').click(function () {
-            $('nav .trangchu-nav-listMessage .donviList').toggleClass('show');
+            $('nav .home-nav-listMessage .donviList').toggleClass('show');
             $('.donvi').toggleClass("clicked");
-            $('.trangchu-nav-listMessage .first-donvi').toggleClass('rotate');
+            $('.home-nav-listMessage .first-donvi').toggleClass('rotate');
         })
 
         $('.khoa').click(function () {
@@ -57,9 +57,9 @@ window.addEventListener('load', () => {
             var file = $('#image_file')[0].files[0].name;
             $(this).prev('label').text(file);
           });
-        $('.trangchu-header-nameProfile').click(function () {
+        $('.home-header-nameProfile').click(function () {
             $('.right_area').toggleClass('show');
-            $('.trangchu-header-nameProfile').toggleClass('clicked')
+            $('.home-header-nameProfile').toggleClass('clicked')
         })
 
        
@@ -112,12 +112,12 @@ window.addEventListener('load', () => {
             </div>`;
             content = video;
            }
-             post = `<div class="trangchu-newFeed-container `+id+`" >
-            <div class="trangchu-newFeed">
+             post = `<div class="home-newFeed-container `+id+`" >
+            <div class="home-newFeed">
                 
-                <div class="trangchu-status">
+                <div class="home-status">
 
-                    <div class="trangchu-nav-headerPost">
+                    <div class="home-nav-headerPost">
 
                                 <div class="postTopLeft">
                                     <img class="img_userPost" src="`+avatar+`" alt="">
@@ -151,7 +151,7 @@ window.addEventListener('load', () => {
                                 </div>
                     </div>
 
-                    <div class="trangchu-nav-contentPost">
+                    <div class="home-nav-contentPost">
                         
                         <div class="postText">
                             `+ desc + `
@@ -166,10 +166,10 @@ window.addEventListener('load', () => {
 
 
 
-                    <div class="trangchu-nav-userComment">
+                    <div class="home-nav-userComment">
 
                         <a href="">
-                            <span class="trangchu-comment-post">
+                            <span class="home-comment-post">
                                 <img src="`+avatar+`" alt="">
                             </span>
                         </a>
@@ -254,7 +254,7 @@ window.addEventListener('load', () => {
             e.preventDefault();
             var idPost = $(this).data('id');
             var idUserPost=$(this).data('user')
-            $('.trangchu-newFeed-container.'+idPost).remove();
+            $('.home-newFeed-container.'+idPost).remove();
             handleDeletePost(idPost,idUserPost)
         })
     })
@@ -283,7 +283,7 @@ function onSignIn(googleUser) {
         {
             signOut();
             // console.log(xhr.user)
-            location.assign('/home/index')
+            location.assign('//index')
         }
         if (xhr.responseText==='Fail') 
         {

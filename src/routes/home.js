@@ -1,33 +1,31 @@
-//get home, get user, get post from user
-
 import express from 'express'
-const Router=express()
+import Post from '../models/postModel.js'
+import User from '../models/accountModel.js'
 
-import Post from '../models/PostModel.js'
-import User from '../models/UserModel.js'
-import Phongban from '../models/PhongbanModel.js'
+const Router = express()
 
-Router.get('/',(req,res)=>{
-    res.send('Home Route')
+Router.get('/', async (req, res) => {
+    if (!req.cookies['auth']) {
+        return res.redirect('/login')
+    }
+    try {
+        var auth = req.cookies['auth']
+        var id = req.cookies['session-secret']
+        if (auth === '0') {
+            const user = await User.findById(id)
+            const postTimeline = await Post.find({}).sort({ updatedAt: -1 })
+            return res.render('home', { postTimeline, user, auth })
+        }
+        else {
+            const user = await User.findById(id)
+            const postTimeline = await Post.find({}).sort({ updatedAt: -1 })
+            return res.render('home', { postTimeline, user, auth })
+        }
+    }
+    catch (err) {
+        return res.status(400).json(err)
+
+    }
 })
 
-// Router.get('/index',async (req,res)=>{
-//     try 
-//     {
-//         const postTimeline=await Post.find({}).sort({createdAt: -1})
-//         res.render('trangchu',{postTimeline})
-//     }
-
-//     catch(err)
-//     {
-//     res.status(400).json(err)
-
-//     }    
-// });
-
-
-Router.post('/index',(req,res)=>{
-    console.log(req.body)
-    res.json(req.body)
-})
-export default Router
+export default Router;

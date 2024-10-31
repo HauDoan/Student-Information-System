@@ -5,10 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang chủ</title>
     <link href="/css/style.css" rel="stylesheet" type="text/css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="/validator/main.js"></script>
+    <script src="main.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
@@ -18,331 +17,264 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js" type="text/javascript"></script>
     <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="Stylesheet"
         type="text/css" />
-        <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-<script src="http://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+    <title>PROFILE</title>
+    <link rel="icon" href="/img/icons/node-js.svg" color="#5bbad5">
 
 </head>
 
 <body>
-
-
-
-    <div class="trangchu-header-contaier">
-
+    <div class="home-header-contaier">
         <div class="left_area">
-
             <div class="row">
-
-                <h3>THÔNG <span>BÁO</span></h3>
-            </div>
-
-        </div>
-
-        <div class="trangchu-header-nameProfile">
-            <span class="nameProfile">HN</span>
-        </div>
-
-        <div class="right_area">
-
-
-            <div class="trangchu-header-imgProfile">
-                <% if (auth==="1" ){ %>
-                    <img src="/no_avatar.jpg" alt="" class="">
-                    <% }%>
-                        <% if (auth==="0" ){ %>
-
-                            <img src="<%=user.avatar%>" alt="" class="">
-                            <% }%>
-            </div>
-
-            <br>
-            <h2 class="mt-2">
-                <%=user.name%>
-            </h2>
-            <hr class="shareHr">
-
-            <ul>
-                <a href="/info">
-                    <li><i class="fa fa-user" aria-hidden="true"></i>Trang cá nhân</li>
+                <a href="/" style="text-decoration: none;">
+                    <h3>THÔNG <span>BÁO</span></h3>
                 </a>
-                <% if (auth==='1' ){ %>
-                    <a href="/home/register">
-                        <li><i class="fa fa-inbox" aria-hidden="true"></i>Tạo phòng ban</li>
-                    </a>
-                    <% }%>
-                        <a href="/logout">
-                            <li class="logout-profile"><i class="fa fa-sign-out-alt" aria-hidden="true"></i>Logout</li>
-                        </a>
-            </ul>
-
-
-        </div>
-
-    </div>
-
-    <div class="trangchu-nav-container">
-
-
-        <div class="trangchu-nav-sidebar">
-            <!-- 
-            <center>
-
-      
-
-            </center> -->
-            <div class="trangchu-nav-sidebarList">
-
-                <div class="trangchu-nav-imgProfile">
-                    <%=user.name%>
-                </div>
-                <ul class="trangchu-nav-sidebarListFeat">
-
-                    <li>
-                        <a href="/home/index" class="trangchu"><i class="fa fa-home"></i><span title="Trang chủ">Trang
-                                chủ</span></a>
-                    </li>
-                    <li>
-                        <a class="trangchu-nav-categoryMessage first"><i class="fas fa-list"></i><span class="first"
-                                title="Phân loại thông báo">Đơn vị</span><span
-                                class="fas fa-chevron-left showList first"></span></a>
-
-                        <nav>
-                            <ul class="trangchu-nav-listMessage">
-
-                                <li>
-                                    <a href="/phongban" class="donvi"><i class="fas fa-users"></i><span
-                                            title="Đơn vị">Khoa/Phòng ban</span></a>
-
-                                </li>
-
-
-
-
-                            </ul>
-                        </nav>
-
-                    </li>
-
-
-
-                    <li>
-                        <div class="logout-profile">
-
-                            <a href="/logout"><i class="fas fa-sign-out-alt"></i><span>Logout</span></a>
-                        </div>
-                    </li>
-                </ul>
-
-
-
-
             </div>
+            <div class="home-header-nameProfile">
+                <span class="nameProfile">HN</span>
+            </div>
+            <div class="right_area">
+                <div class="home-header-imgProfile">
+                    <% if (auth==="1" ){ %>
+                        <img src="<%=user.avatar%>" alt="" class="">
+                        <% }%>
+                            <% if (auth==="0" ){ %>
 
-
-
-
-
+                                <img src="<%=user.avatar%>" alt="" class="">
+                                <% }%>
+                </div>
+                <br>
+                <h2 class="mt-2">
+                    <%=user.name%>
+                </h2>
+                <hr class="shareHr">
+                <ul>
+                    <a href="/info">
+                        <li><i class="fa fa-user" aria-hidden="true"></i>Trang cá nhân</li>
+                    </a>
+                    <% if (auth==='1' ){ %>
+                        <a href="/register">
+                            <li><i class="fa fa-inbox" aria-hidden="true"></i>Tạo phòng ban</li>
+                        </a>
+                        <% }%>
+                            <a href="/logout">
+                                <li class="logout-profile"><i class="fa fa-sign-out-alt" aria-hidden="true"></i>Logout
+                                </li>
+                            </a>
+                </ul>
+            </div>
         </div>
 
-        <div class="trangchu-nav-contentStatus">
+        <div class="home-nav-container">
+            <div class="home-nav-sidebar">
+                <div class="home-nav-sidebarList">
 
-            <div class="trangchu-nav-Status">
-                <div class="row row-status">
+                    <div class="home-nav-imgProfile">
+                        <%=user.name%>
+                    </div>
+                    <ul class="home-nav-sidebarListFeat">
 
-                    <div class="col-sm-8">
-                        <div class="postStatus">
+                        <li>
+                            <a href="/" class="home"><i class="fa fa-home"></i><span title="Trang chủ">Trang
+                                    chủ</span></a>
+                        </li>
+                        <li>
+                            <a class="home-nav-categoryMessage first"><i class="fas fa-list"></i><span class="first"
+                                    title="Phân loại thông báo">Đơn vị</span><span
+                                    class="fas fa-chevron-left showList first"></span></a>
 
-                            <div class="row postStatus-row">
-                                <!-- <div class="share"> -->
-                                <!-- <form action="/api/posts" method="POST" id="formCreate" enctype="multipart/form-data" class="formCreate"> -->
+                            <nav>
+                                <ul class="home-nav-listMessage">
 
-                                <div class="shareWrapper">
+                                    <li>
+                                        <a href="/phongban" class="donvi"><i class="fas fa-users"></i><span
+                                                title="Đơn vị">Khoa/Phòng ban</span></a>
 
+                                    </li>
+                                </ul>
+                            </nav>
+                        </li>
+                        <li>
+                            <div class="logout-profile">
 
-                                    <div class="timeline">
-                                        <div class="container-userInfo">
-                                            <div class="title-userInfo">Thông tin cá nhân</div>
+                                <a href="/logout"><i class="fas fa-sign-out-alt"></i><span>Logout</span></a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="home-nav-contentStatus">
 
-            
+                <div class="home-nav-Status">
+                    <div class="row row-status">
 
+                        <div class="col-sm-8">
+                            <div class="postStatus">
+                                <div class="row postStatus-row">
+                                    <div class="shareWrapper">
+                                        <div class="timeline">
+                                            <div class="container-userInfo">
+                                                <div class="title-userInfo">Thông tin cá nhân</div>
+                                                <div class="content-userInfo">
+                                                    <form id="formInfo" action="/info" method="POST"
+                                                        enctype="multipart/form-data">
 
-                                            <div class="content-userInfo">
-                                                <form id="formInfo" action="/info" method="POST" enctype="multipart/form-data">
-
-                                                <div class="container-picture">
-                                                    <div class="wrapper-picture">
-                                                        <div class="image">
-                                                            <img id="output" src="<%=user.avatar%>" alt="">
-                                                        </div>
-                                                        <div class="content-picture">
-                                                            <div class="icon">
-                                                                <i class="fas fa-cloud-upload-alt"></i>
+                                                        <div class="container-picture">
+                                                            <div class="wrapper-picture">
+                                                                <div class="image">
+                                                                    <img id="output" src="<%=user.avatar%>" alt="">
+                                                                </div>
+                                                                <div class="content-picture">
+                                                                    <div class="icon">
+                                                                        <i class="fas fa-cloud-upload-alt"></i>
+                                                                    </div>
+                                                                    <div class="text-picture">
+                                                                        Ảnh chưa chọn!
+                                                                    </div>
+                                                                </div>
+                                                                <div id="cancel-btn">
+                                                                    <i class="fas fa-times"></i>
+                                                                </div>
                                                             </div>
-                                                            <div class="text-picture">
-                                                                Ảnh chưa chọn!
+                                                            <script>
+                                                                var loadFile = function (event) {
+                                                                    var output = document.getElementById('output');
+                                                                    output.src = URL.createObjectURL(event.target.files[0]);
+                                                                    output.onload = function () {
+                                                                        URL.revokeObjectURL(output.src) // free memory
+                                                                    }
+                                                                };
+                                                            </script>
+
+                                                            <label id="custom-btn" for="default-btn">Chọn ảnh</label>
+                                                            <input id="default-btn" name="image" accept="image/*"
+                                                                onchange="loadFile(event)" type="file" hidden>
+                                                        </div>
+
+
+                                                        <div class="user-details">
+                                                            <div class="input-box">
+                                                                <label class="details">Họ và tên</label>
+                                                                <input name="name" type="text" disabled
+                                                                    value="<%=user.name%>">
                                                             </div>
-                                                        </div>
-                                                        <div id="cancel-btn">
-                                                            <i class="fas fa-times"></i>
-                                                        </div>
-                                                    </div>
-                                                    <script>
-                                                        var loadFile = function (event) {
-                                                            var output = document.getElementById('output');
-                                                            output.src = URL.createObjectURL(event.target.files[0]);
-                                                            output.onload = function () {
-                                                                URL.revokeObjectURL(output.src) // free memory
-                                                            }
-                                                        };
-                                                    </script>
-                                                    
-                                                    <label id="custom-btn" for="default-btn">Chọn ảnh</label>
-                                                    <input id="default-btn" name="image" accept="image/*" onchange="loadFile(event)"
-                                                        type="file"hidden >
-                                                </div>
+                                                            <div class="input-box">
+                                                                <label class="details">Lớp</label>
+                                                                <input name="lop" value="<%=user.class%>" id="class"
+                                                                    type="text" placeholder="">
+                                                            </div>
+                                                            <div class="input-box">
+                                                                <label class="details">Khoa</label>
+                                                                <input name="khoa" value="<%=user.khoa%>" id="khoa"
+                                                                    type="text" placeholder="">
+                                                            </div>
 
+                                                            <div class="input-box">
+                                                                <label class="details">Email</label>
+                                                                <input id="email" name="email" disabled type="text"
+                                                                    value="<%=user.email%>">
+                                                            </div>
+                                                            <div class="input-box">
+                                                                <label class="details">Mật khẩu mới</label>
+                                                                <input name="pwd" id="pwd" type="password"
+                                                                    placeholder="Điền mật khẩu mới">
 
-                                                    <div class="user-details">
-                                                        <div class="input-box">
-                                                            <label class="details">Họ và tên</label>
-                                                            <input name="name" type="text" disabled value="<%=user.name%>">
-                                                        </div>
-                                                         <div class="input-box">
-                                                            <label class="details">Lớp</label>
-                                                            <input name="lop" value="<%=user.class%>" id="class" type="text" placeholder="">
-                                                        </div>
-                                                        <div class="input-box">
-                                                            <label class="details">Khoa</label>
-                                                            <input name="khoa"value="<%=user.khoa%>" id="khoa" type="text" placeholder="">
-                                                        </div>
-
-                                                        <div class="input-box">
-                                                            <label class="details">Email</label>
-                                                            <input id="email"name="email" disabled type="text" value="<%=user.email%>">
-                                                        </div>
-                                                        <div class="input-box">
-                                                            <label class="details">Mật khẩu mới</label>
-                                                            <!-- style="display: none;" -->
-                                                            <input name="pwd" id="pwd" type="password" placeholder="Điền mật khẩu mới">
-
-                                                                <div class="alert alert-danger mt-1 pl-2 " id="pwd_error_1"style="padding: 0; display: none;">
+                                                                <div class="alert alert-danger mt-1 pl-2 "
+                                                                    id="pwd_error_1" style="padding: 0; display: none;">
                                                                     <strong id="error_pwd_1">Lỗi ! </strong>
-                                                                  </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="input-box">
+                                                                <label class="details">Xác nhận mật khẩu mới</label>
+                                                                <input name="confirm_pwd" id="confirm_pwd"
+                                                                    type="password" placeholder="Xác nhận mật khẩu mới">
+                                                                <div class="alert alert-danger mt-1 pl-2 confirm_error"
+                                                                    id="pwd_error_2" style="padding: 0; display: none;">
+                                                                    <strong id="error_pwd_2">Lỗi ! </strong>
+                                                                </div>
+                                                            </div>
+                                                            <% if (error!='' ) {%>
+                                                                <div class="alert alert-danger">
+                                                                    <strong>Lỗi ! </strong>
+                                                                    <%= error%>
+                                                                </div>
+                                                                <% }%>
                                                         </div>
-                                                        <div class="input-box">
-                                                            <label class="details">Xác nhận mật khẩu mới</label>
-                                                            <input name="confirm_pwd"  id="confirm_pwd" type="password" placeholder="Xác nhận mật khẩu mới">
-                                                            <div class="alert alert-danger mt-1 pl-2 confirm_error" id="pwd_error_2" style="padding: 0; display: none;">
-                                                                <strong id="error_pwd_2">Lỗi ! </strong>
-                                                              </div>
+                                                        <div class="alert alert-success fade show" id="notify"
+                                                            style="display: none;">
+                                                            <strong>Thành công !!</strong> Cập nhật thông tin tài khoản
+                                                            sinh viên thành công.
                                                         </div>
-                                                        <% if (error!='') {%>
-                                                            <div class="alert alert-danger">
-                                                                <strong>Lỗi ! </strong><%= error%>
-                                                              </div>
-                                                              <% }%>
-                                                    </div>
-                                                    <div class="alert alert-success fade show" id="notify" style="display: none;">
-                                                        <strong>Thành công !!</strong> Cập nhật thông tin tài khoản sinh viên thành công.
-                                                      </div>
-                                                      
-                                                    <div class="button">
-                                                        <button class="shareButton" type="submit" >Xác
-                                                            nhận thay đổi</button>
 
-                                       </div>
-                                                </form>
+                                                        <div class="button">
+                                                            <button class="shareButton" type="submit">Xác
+                                                                nhận thay đổi</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
                                             </div>
                                         </div>
-
-
                                     </div>
-
-
-
                                 </div>
-
-                                <!-- </div> -->
-
-                            </div>
-
-
-
-                        </div>
-
-
-
-
-                    </div>
-
-                    <div class="col-sm-4">
-
-                        <div class="trangchu-header-container">
-                            <h3>Thông báo mới</h3>
-                            <a href="#">Xem tất cả</a>
-                        </div>
-
-                        <div class="trangchu-sidebar-message">
-                            <div class="list-group">
-                                <a href="#"
-                                    class="list-group-item list-group-item-action flex-column align-items-start ">
-                                    <div class=" justify-content-between">
-                                        <!-- <h5 class="mb-1">[Phòng đại học]- <span class="trangchu-sidebar-dateupload">03-02-2021</span></h5> -->
-                                        <small><span class="trangchu-message-userupload">[Phòng đại học]</span
-                                                class="trangchu-message-dateupload"> 22-01-2021</small>
-                                        <h5>Thông báo đóng học phí học kì II 2021-2022</h5>
-                                    </div>
-                                    <p class="mb-1">Từ 10h00 thứ Tư ngày 13/10/2021 đến 9h00 thứ Tư ngày 26/1/2022</p>
-                                </a>
-                                <a href="#"
-                                    class="list-group-item list-group-item-action flex-column align-items-start ">
-                                    <div class=" justify-content-between">
-                                        <!-- <h5 class="mb-1">[Phòng đại học]- <span class="trangchu-sidebar-dateupload">03-02-2021</span></h5> -->
-                                        <small><span class="trangchu-message-userupload">[Phòng CTHSSV]</span
-                                                class="trangchu-message-dateupload"> - 06/12/2021</small>
-                                        <h5>Kế hoạch xét công nhận tốt nghiệp đợt tháng 01/2022</h5>
-                                    </div>
-                                    <p class="mb-1">Sinh viên xem chi tiết trong thông báo.</p>
-                                </a>
-                                <a href="#"
-                                    class="list-group-item list-group-item-action flex-column align-items-start ">
-                                    <div class=" justify-content-between">
-                                        <h5 class="mb-1">[Phòng đại học]- <span
-                                                class="trangchu-sidebar-dateupload">03-02-2021</span></h5>
-                                        <small><span class="trangchu-message-userupload">[Phòng đại học]</span>
-                                            class="trangchu-message-dateupload"> 24-12-2021</small>
-                                        <h5>Lịch thi và danh sách thi cuối kỳ HKdt1/2021-2022</h5>
-                                    </div>
-                                    <p class="mb-1">Sinh viên xem chi tiết Lịch thi và danh sách thi cuối kỳ
-                                        HKdt1/2021-2022 trong file đính kèm.</p>
-                                </a>
                             </div>
                         </div>
 
-                        <div class='datepicker'>
-                            <div class="datepicker-header"></div>
+                        <div class="col-sm-4">
+
+                            <div class="home-header-container">
+                                <h3>Thông báo mới</h3>
+                                <a href="/notifications">Xem tất cả</a>
+                            </div>
+
+                            <div class="home-sidebar-message">
+                                <div class="list-group">
+                                    <a href="#"
+                                        class="list-group-item list-group-item-action flex-column align-items-start ">
+                                        <div class=" justify-content-between">
+                                            <small><span class="home-message-userupload">[Phòng đại học]</span
+                                                    class="home-message-dateupload"> 22-01-2021</small>
+                                            <h5>Thông báo đóng học phí học kì II 2021-2022</h5>
+                                        </div>
+                                        <p class="mb-1">Từ 10h00 thứ Tư ngày 13/10/2021 đến 9h00 thứ Tư ngày 26/1/2022
+                                        </p>
+                                    </a>
+                                    <a href="#"
+                                        class="list-group-item list-group-item-action flex-column align-items-start ">
+                                        <div class=" justify-content-between">
+                                            <small><span class="home-message-userupload">[Phòng CTHSSV]</span
+                                                    class="home-message-dateupload"> - 06/12/2021</small>
+                                            <h5>Kế hoạch xét công nhận tốt nghiệp đợt tháng 01/2022</h5>
+                                        </div>
+                                        <p class="mb-1">Sinh viên xem chi tiết trong thông báo.</p>
+                                    </a>
+                                    <a href="#"
+                                        class="list-group-item list-group-item-action flex-column align-items-start ">
+                                        <div class=" justify-content-between">
+                                            <h5 class="mb-1">[Phòng đại học]- <span
+                                                    class="home-sidebar-dateupload">03-02-2021</span></h5>
+                                            <small><span class="home-message-userupload">[Phòng đại học]</span>
+                                                class="home-message-dateupload"> 24-12-2021</small>
+                                            <h5>Lịch thi và danh sách thi cuối kỳ HKdt1/2021-2022</h5>
+                                        </div>
+                                        <p class="mb-1">Sinh viên xem chi tiết Lịch thi và danh sách thi cuối kỳ
+                                            HKdt1/2021-2022 trong file đính kèm.</p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class='datepicker'>
+                                <div class="datepicker-header"></div>
+                            </div>
+
                         </div>
 
                     </div>
-
                 </div>
             </div>
-
-        </div>
-
-
-
 </body>
 
-
 <div class="content">
-
 </div>
-<!-- <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script> -->
-
-<script>
-    
-
-</script>
 
 </html>

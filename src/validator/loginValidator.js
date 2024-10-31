@@ -8,6 +8,4 @@ module.exports=[
     check('password')
     .exists().withMessage('Vui lòng nhập password')
     .notEmpty().withMessage('Password không được phép để trống!!'),
-
-
 ]

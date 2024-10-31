@@ -1,6 +1,6 @@
 //get_post,  create_post, update_post, delete post like, post and dislike, get_post by id 
-import Post from '../models/PostModel.js'
-import User from '../models/UserModel.js'
+import Post from '../models/postModel.js'
+import User from '../models/accountModel.js'
 import  moment from 'moment'
 import multer from 'multer'
 import mongoose  from 'mongoose';
