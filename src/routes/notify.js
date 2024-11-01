@@ -4,8 +4,8 @@ import NotifyModel from "../models/notificationModel.js";
 const Router = express();
 
 Router.get('/:id', async (req, res) => {
-    if (!req.cookies['auth']) {
-        return res.redirect('/login')
+    if (!req.session.key) {
+        res.redirect('/login')
     }
     try {
         var id = req.params.id

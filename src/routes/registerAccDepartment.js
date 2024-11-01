@@ -5,8 +5,8 @@ import registerValidator from '../validator/registerValidator.js'
 
 const Router = express();
 Router.get('/', async (req, res) => {
-    if (!req.cookies['auth']) {
-        return res.redirect('/login')
+    if (!req.session.key) {
+        res.redirect('/login')
     }
     var auth = req.cookies['auth']
     const error = req.flash('error') || ''
@@ -18,13 +18,10 @@ Router.get('/', async (req, res) => {
 })
 
 Router.post('/', registerValidator, (req, res) => {
-    if (!req.cookies['auth']) {
-        return res.redirect('/login')
+    if (!req.session.key) {
+        res.redirect('/login')
     }
     let result = validationResult(req)
-    if (!req.session.user) {
-        return res.redirect('/login')
-    }
     if (result.errors.length === 0) {
 
         const { username, password, role, role_post } = req.body

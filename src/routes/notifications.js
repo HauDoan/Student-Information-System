@@ -5,8 +5,8 @@ const Router = express()
 
 // url: /notifications
 Router.get('/', async (req, res) => {
-    if (!req.cookies['auth']) {
-        return res.redirect('/login')
+    if (!req.session.key) {
+        res.redirect('/login')
     }
     try {
         let id = req.cookies['session-secret']
@@ -20,8 +20,8 @@ Router.get('/', async (req, res) => {
 })
 
 Router.get('/posting', async (req, res) => {
-    if (!req.cookies['auth']) {
-        return res.redirect('/login')
+    if (!req.session.key) {
+        res.redirect('/login')
     }
     try {
         var id = req.cookies['session-secret']
@@ -35,8 +35,8 @@ Router.get('/posting', async (req, res) => {
 
 
 Router.post('/posting', async (req, res) => {
-    if (!req.session.auth) {
-        return res.redirect('/login')
+    if (!req.session.key) {
+        res.redirect('/login')
     }
     var auth = req.cookies['user']
     let thongbaodb = new ThongbaoDB({

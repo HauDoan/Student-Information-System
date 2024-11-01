@@ -19,7 +19,6 @@ const storage = multer.diskStorage({
 //Khởi tạo middleware với cấu hình trên, lưu trên local của server khi dùng multer
 const upload = multer({
     dest: 'uploads', fileFilter: (req, file, callback) => {
-        // console.log(file)
         if (file.mimetype.startsWith('image/')) {
             callback(null, true)
         }
@@ -30,35 +29,25 @@ const upload = multer({
     }, limits: 500000
 })
 Router.get('/', async (req, res) => {
-    if (!req.cookies['auth']) {
+    if (!req.session.key) {
         res.redirect('/login')
     }
     try {
         var auth = req.cookies['auth']
         var id = req.cookies['session-secret']
-        if (auth === '0') {
-            const user = await User.findById(id)
-            res.render('info', { user, auth, error: "", lop: "", khoa: "", pwd: "", confirm_pwd: "" })
-        }
-        else {
-            const user = await User.findById(id)
-            res.render('info', { user, auth, error: "", lop: "", khoa: "", pwd: "", confirm_pwd: "" })
-        }
+        const user = await User.findById(id)
+        res.render('info', { user, auth, error: "", lop: "", khoa: "", pwd: "", confirm_pwd: "" })
     }
     catch (err) {
         res.status(400).json(err)
     }
 })
 
-
 Router.post('/', async (req, res) => {
-    if (!req.cookies['auth']) {
-        return res.redirect('/login')
+    if (!req.session.key) {
+        res.redirect('/login')
     }
     const acc = req.body
-    var class1 = acc.class
-    var password = acc.pwd
-    var hash_password = bcrypt.hashSync("123456", 10)
     var auth = req.cookies['auth']
     var id = req.cookies['session-secret']
     const user = await User.findById(req.cookies['session-secret'])

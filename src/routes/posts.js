@@ -75,11 +75,12 @@ Router.post("/", async (req, res) => {
 
     })
 
-
-
 })
 //update post User 
 Router.post("/update/:id", async (req, res) => {
+    if (!req.session.key) {
+        res.redirect('/login')
+    }
     var idPost = req.params.id
     const idUser = req.cookies['session-secret']
     const newPost = await Post.findById(idPost)

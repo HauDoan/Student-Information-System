@@ -5,7 +5,7 @@ import User from '../models/accountModel.js'
 const Router = express()
 
 Router.get('/', async (req, res) => {
-    if (!req.cookies['auth']) {
+    if (!req.session.key) {
         return res.redirect('/login')
     }
     try {

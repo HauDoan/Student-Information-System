@@ -15,7 +15,7 @@ Router.get('/', (req, res) => {
     const password = req.flash('password') || ''
     const username = req.flash('username') || ''
     const auth = req.cookies['auth']
-    if (!req.cookies['session-secret']) {
+    if (!req.session.key) {
         if (error1 == 1) {
             error = 'Vui lòng sử dụng tài khoản email sinh viên để truy cập Website.'
             return res.render('login', { error, password, username })
@@ -24,14 +24,7 @@ Router.get('/', (req, res) => {
             return res.render('login', { error, password, username })
         }
     }
-    else {
-        if (auth === '1') {
-            return res.redirect('/message')
-        }
-        else {
-            return res.redirect('/')
-        }
-    }
+    return res.redirect('/')
 })
 
 Router.post('/', loginValidatator, async (req, res) => {
@@ -46,8 +39,7 @@ Router.post('/', loginValidatator, async (req, res) => {
                     req.flash('username', username)
                     return res.redirect('/login')
                 }
-
-                bcrypt.compare(password, acc.password).then(function (passwordMatch) {
+                bcrypt.compare(password, acc.password).then(async function (passwordMatch) {
                     if (passwordMatch === false) {
                         req.flash('error', 'Sai username hoặc mật khẩu')
                         req.flash('password', password)
@@ -55,7 +47,7 @@ Router.post('/', loginValidatator, async (req, res) => {
                         res.redirect('/login')
                     }
                     else {
-                        req.session.user = acc
+                        req.session.key = acc.email
                         res.cookie('auth', '1')
                         res.cookie('session-secret', acc._id)
                         res.redirect('/')

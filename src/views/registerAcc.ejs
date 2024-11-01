@@ -43,17 +43,12 @@
             <div class="home-header-nameProfile">
                 <span class="nameProfile">HN</span>
             </div>
-            <div class="home-header-nameProfile">
-                <span class="nameProfile"></span>
-            </div>
-
             <div class="right_area">
-
                 <div class="home-header-imgProfile">
-                    <% if (auth==='1' ){ %>
+                    <% if (auth==="1" ){ %>
                         <img src="<%=user.avatar%>" alt="" class="">
                         <% }%>
-                            <% if (auth==='0' ){ %>
+                            <% if (auth==="0" ){ %>
 
                                 <img src="<%=user.avatar%>" alt="" class="">
                                 <% }%>
@@ -62,6 +57,7 @@
                 <h2 class="mt-2">
                     <%=user.name%>
                 </h2>
+                <hr class="shareHr">
                 <ul>
                     <a href="/info">
                         <li><i class="fa fa-user" aria-hidden="true"></i>Trang cá nhân</li>
@@ -76,9 +72,7 @@
                                 </li>
                             </a>
                 </ul>
-
             </div>
-
         </div>
 
         <div class="home-nav-container">
