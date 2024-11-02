@@ -52,7 +52,7 @@ Router.use(express.urlencoded({ extended: true }))
 Router.get("/", postController.post_index)
 //create post 
 Router.post("/", async (req, res) => {
-    const id = req.cookies['session-secret']
+    const id = req.session.key
     const user = await User.findById(id)
     let uploader = upload.single('image')
     uploader(req, res, err => {
@@ -81,10 +81,10 @@ Router.post("/update/:id", async (req, res) => {
     if (!req.session.key) {
         res.redirect('/login')
     }
-    var idPost = req.params.id
-    const idUser = req.cookies['session-secret']
+    var id = req.session.key
+    let user = await User.findById(id);
+    var auth = user.isAdmin
     const newPost = await Post.findById(idPost)
-    const user = await User.findById(idUser)
     await user.updateOne({ $push: { posts: newPost } })
     res.send('successful')
 })

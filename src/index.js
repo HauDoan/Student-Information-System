@@ -7,7 +7,6 @@ import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 import flash from 'express-flash'
 import session from 'express-session'
-import ThongbaoDB from "./models/notificationModel.js";
 import LoginRoute from './routes/login.js'
 import { createClient } from 'redis';
 import RedisStore from "connect-redis"
@@ -31,14 +30,13 @@ const __dirname = dirname(__filename);
 const PORT = process.env.PORT || 8080
 
 // Initialize client.
-let redisClient = createClient({url: redisURL})
+let redisClient = createClient({ url: redisURL })
 redisClient.connect().catch(console.error)
 
 // Initialize store.
 let redisStore = new RedisStore({
-    client: redisClient,
-    prefix: "myapp:",
-  })
+    client: redisClient
+})
 
 app.set('view engine', 'ejs')
 app.use(session({
@@ -46,7 +44,7 @@ app.use(session({
     rolling: false,
     saveUninitialized: false,
     secret: 'somesecret',
-    cookie: { maxAge: 10000 },
+    cookie: { maxAge: 60000 },
     store: redisStore
 }));
 
@@ -68,35 +66,19 @@ app.use("/api/department", DepartmentRoute)
 // Routes
 app.use("/", HomeRoute)
 app.use("/register", RegisterAccountRoute)
-// app.use('/message', MessageRoute)
+app.use('/message', MessageRoute)
 app.use('/login', LoginRoute, flash)
 app.use('/info', InfoRoute)
 app.use('/notifications', NotificationRoute)
 app.use('/notify', NotifyRoute)
 
-// app.get('/message', async (req, res) => {
-//     if (!req.cookies['auth']) {
-//         return res.redirect('/login')
-//     }
-//     try {
-//         // if (!req.session.user) {
-//         //     return res.redirect('/login')
-//         // }
-//         var auth = req.cookies['user']
-//         let user = req.user;
-//         const postTimeline = await Post.find({}).sort({ createdAt: -1 })
-//         res.render('home', { postTimeline, user, auth })
-//     }
-//     catch (err) {
-//         res.status(400).json(err)
-//     }
-// })
-
 app.get('/logout', (req, res) => {
-    res.clearCookie('session-token')
-    res.clearCookie('auth')
-    res.clearCookie('session-secret')
+    req.session.destroy();
     res.redirect('login')
+})
+
+app.all('*', (req, res) => {
+    res.status(404).render('error');
 })
 
 app.listen(PORT, () => {

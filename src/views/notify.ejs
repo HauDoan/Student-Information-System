@@ -40,22 +40,29 @@
 
             <div class="right_area">
                 <div class="home-header-imgProfile">
-                    <i class="fas fa-user"></i>
+                    <img src="<%=user.avatar%>" alt="" class="">
                 </div>
+    
+                <br>
+                <h2 class="mt-2">
+                    <%=user.name%>
+                </h2>
+                <hr class="shareHr">
+    
                 <ul>
-                    <a href="/">
+                    <a href="/info">
                         <li><i class="fa fa-user" aria-hidden="true"></i>Trang cá nhân</li>
                     </a>
-                    <% if (auth==='1' ){ %>
+                    <% if (auth){ %>
                         <a href="/register">
                             <li><i class="fa fa-inbox" aria-hidden="true"></i>Tạo phòng ban</li>
                         </a>
                         <% }%>
                             <a href="/logout">
-                                <li class="logout-profile"><i class="fa fa-sign-out-alt" aria-hidden="true"></i>Logout
-                                </li>
+                                <li class="logout-profile"><i class="fa fa-sign-out-alt" aria-hidden="true"></i>Logout</li>
                             </a>
                 </ul>
+    
             </div>
         </div>
         <div class="home-nav-container">

@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>NOTIFICATIONS </title>
-	<link rel="icon" href="/img/icons/node-js.svg" color="#5bbad5">
+    <link rel="icon" href="/img/icons/node-js.svg" color="#5bbad5">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -36,18 +36,21 @@
             </div>
 
             <div class="right_area">
-
-
                 <div class="home-header-imgProfile">
-                    <i class="fas fa-user"></i>
+                    <img src="<%=user.avatar%>" alt="" class="">
                 </div>
 
+                <br>
+                <h2 class="mt-2">
+                    <%=user.name%>
+                </h2>
+                <hr class="shareHr">
 
                 <ul>
-                    <a href="/">
+                    <a href="/info">
                         <li><i class="fa fa-user" aria-hidden="true"></i>Trang cá nhân</li>
                     </a>
-                    <% if (auth==='1' ){ %>
+                    <% if (auth){ %>
                         <a href="/register">
                             <li><i class="fa fa-inbox" aria-hidden="true"></i>Tạo phòng ban</li>
                         </a>
@@ -93,8 +96,6 @@
                             </nav>
 
                         </li>
-
-
 
                         <li>
                             <div class="logout-profile">

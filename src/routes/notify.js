@@ -8,16 +8,16 @@ Router.get('/:id', async (req, res) => {
         res.redirect('/login')
     }
     try {
-        var id = req.params.id
-        var auth = req.cookies['user']
+        const id = req.session.key
+        let user = await User.findById(id);
+        var auth = user.isAdmin
         const notify = await NotifyModel.findById(id)
         if (notify) {
-            res.render('chitietthongbao', { notify, auth })
+            res.render('chitietthongbao', { notify, user, auth })
         } else {
             res.redirect('home')
         }
     } catch (error) {
-        console.log(error);
         res.render('error');
     }
 

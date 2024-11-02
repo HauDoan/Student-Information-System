@@ -9,12 +9,10 @@ const client = new OAuth2Client(process.env.CLIENT_ID)
 const Router = express();
 
 Router.get('/', (req, res) => {
-
     var error1 = req.query.err
     var error = req.flash('error') || ''
     const password = req.flash('password') || ''
     const username = req.flash('username') || ''
-    const auth = req.cookies['auth']
     if (!req.session.key) {
         if (error1 == 1) {
             error = 'Vui lòng sử dụng tài khoản email sinh viên để truy cập Website.'
@@ -47,9 +45,7 @@ Router.post('/', loginValidatator, async (req, res) => {
                         res.redirect('/login')
                     }
                     else {
-                        req.session.key = acc.email
-                        res.cookie('auth', '1')
-                        res.cookie('session-secret', acc._id)
+                        req.session.key = acc._id
                         res.redirect('/')
                     }
                 })
@@ -63,7 +59,6 @@ Router.post('/', loginValidatator, async (req, res) => {
             break
         }
         const { username, password } = req.body
-
         req.flash('error', message)
         req.flash('username', username)
         req.flash('password', password)
@@ -100,17 +95,11 @@ Router.post('/login/google', (req, res) => {
                     }
                     const user1 = await new User({ name: user.name, username: user.email, khoa: khoa, avatar: user.picture, email: user.email, posts: [] })
                     user1.save()
-                    res.cookie('session-secret', user1._id.toString())
                 }
                 else {
-                    res.cookie('session-secret', userAccount._id.toString())
-
                 }
-                res.cookie('auth', '0')
-                res.send('success')
             }
             else {
-
                 res.send('Fail')
             }
 

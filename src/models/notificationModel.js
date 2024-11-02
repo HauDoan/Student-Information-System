@@ -4,24 +4,24 @@ const ThongbaoDB = new mongoose.Schema(
     {
         title: {
             type: String
-            
+
         },
         text: {
-            type: String  
+            type: String
         },
         user: {
             type: Object,
-           
-            name: 
+
+            name:
             {
                 tpye: String
             },
         },
-         createdAt:
-         {
-             type: String
-         },
- 
+        createdAt:
+        {
+            type: String
+        },
+
     });
 
 export default mongoose.model("ThongbaoDB", ThongbaoDB);

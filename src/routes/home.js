@@ -9,22 +9,15 @@ Router.get('/', async (req, res) => {
         return res.redirect('/login')
     }
     try {
-        var auth = req.cookies['auth']
-        var id = req.cookies['session-secret']
-        if (auth === '0') {
-            const user = await User.findById(id)
-            const postTimeline = await Post.find({}).sort({ updatedAt: -1 })
-            return res.render('home', { postTimeline, user, auth })
-        }
-        else {
-            const user = await User.findById(id)
-            const postTimeline = await Post.find({}).sort({ updatedAt: -1 })
-            return res.render('home', { postTimeline, user, auth })
-        }
+        const id = req.session.key
+        const user = await User.findById(id)
+        const postTimeline = await Post.find({}).sort({ createdAt: -1 })
+        const auth = user.isAdmin
+        console.log(postTimeline);
+        return res.render('home', { postTimeline, user, auth })
     }
     catch (err) {
         return res.status(400).json(err)
-
     }
 })
 

@@ -9,7 +9,9 @@ Router.get("/", async (req, res) => {
         res.redirect('/login')
     }
     try {
-        const user = await User.findById(req.body.userID)
+        const id = req.session.key
+        let user = await User.findById(id);
+        const auth = user.isAdmin
         res.status(200).json(user.email)
     }
     catch (err) {
@@ -24,7 +26,7 @@ Router.post('/register', (req, res) => {
     let message = '';
     if (result.errors.length === 0) {
         let { name, username, password, post } = req.body
-        let hash = bcrypt.hash(password, 10)
+        bcrypt.hash(password, 10)
             .then(
                 hashed => {
                     let user = new User({
@@ -50,11 +52,9 @@ Router.post('/register', (req, res) => {
     }
     else {
         let messages = result.mapped()
-
         for (m in messages) {
             message = messages[m]
             break;
-
         }
         return res.json({ code: 1, message: message })
 
@@ -66,8 +66,10 @@ Router.put('/:id/follow', async (req, res) => {
         res.redirect('/login')
     }
     try {
-        const user = await User.findById(req.body.userID)
-        if (!user.followers.includes(req.params.id)) {
+        const id = req.session.key
+        let user = await User.findById(id);
+        const auth = user.isAdmin
+        if (!user.followers.includes(id)) {
             await user.updateOne({ $push: { followers: req.body.userID } })
             res.status(200).json("Follow user successful!!")
         }
@@ -81,4 +83,4 @@ Router.put('/:id/follow', async (req, res) => {
     }
 })
 
-module.exports = Router
+export default Router;

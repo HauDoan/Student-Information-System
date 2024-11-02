@@ -8,10 +8,11 @@ Router.get('/', async (req, res) => {
     if (!req.session.key) {
         res.redirect('/login')
     }
-    var auth = req.cookies['auth']
+    var id = req.session.key
+    let user = await User.findById(id);
+    var auth = user.isAdmin
     const error = req.flash('error') || ''
     const password = req.flash('password') || ''
-    const user = req.session.user || ''
     const role = req.flash('role') || ''
     const role_post = req.flash('role_post') || ''
     res.render('registerAcc', { error, password, user, role, role_post, auth })
@@ -36,7 +37,7 @@ Router.post('/', registerValidator, (req, res) => {
                     return res.redirect('/register')
                 }
             })
-        let hashed = bcrypt.hash(password, 10)
+        bcrypt.hash(password, 10)
             .then(hashed => {
 
                 let user = new User({

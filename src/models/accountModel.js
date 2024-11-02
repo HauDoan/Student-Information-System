@@ -1,6 +1,6 @@
 import pkg from 'express/lib/response.js';
 const { type } = pkg;
-import mongoose  from 'mongoose'
+import mongoose from 'mongoose'
 const Schema = mongoose.Schema
 
 const UserSchema = new Schema(
@@ -9,14 +9,13 @@ const UserSchema = new Schema(
         {
             type: String,
             require: true,
-            // unique: true,
         },
         username: {
             type: String,
-            // require: true,
+            require: true,
             min: 3,
             max: 20,
-            // unique: true,
+            unique: true,
         },
         email: {
             type: String,
@@ -25,27 +24,21 @@ const UserSchema = new Schema(
         },
         password: {
             type: String,
-            // required: true,
             min: 6
         },
         avatar: {
             type: String,
             default: "",
         },
-        role: 
+        khoa:
         {
-        type: Array
-        // default: [],
+            type: String,
+            default: []
         },
-        khoa: 
+        class:
         {
-        type: String
-        // default: [],
-        },
-        class: 
-        {
-        type: String
-        // default: [],
+            type: String,
+            default: []
         },
         posts:
         {
@@ -53,7 +46,7 @@ const UserSchema = new Schema(
             default:
                 [
                     {
-                        _id: 
+                        _id:
                         {
                             type: String
                         },
@@ -84,18 +77,18 @@ const UserSchema = new Schema(
                             default: [
                                 {
                                     type: Object,
-                                    _id: 
+                                    _id:
                                     {
                                         type: String
                                     },
-                                    name: 
+                                    name:
                                     {
                                         type: String
                                     },
                                     avatar: {
                                         type: String
                                     },
-                                    description: 
+                                    description:
                                     {
                                         type: String
                                     }
@@ -103,7 +96,6 @@ const UserSchema = new Schema(
                             ]
                         }
                     }
-                   
                 ]
         },
         isAdmin: {
@@ -112,4 +104,4 @@ const UserSchema = new Schema(
         },
     });
 
-export default  mongoose.model('account', UserSchema)
+export default mongoose.model('account', UserSchema)

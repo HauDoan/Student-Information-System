@@ -33,9 +33,9 @@ Router.get('/', async (req, res) => {
         res.redirect('/login')
     }
     try {
-        var auth = req.cookies['auth']
-        var id = req.cookies['session-secret']
+        const id = req.session.key
         const user = await User.findById(id)
+        var auth = user.isAdmin
         res.render('info', { user, auth, error: "", lop: "", khoa: "", pwd: "", confirm_pwd: "" })
     }
     catch (err) {
@@ -47,17 +47,14 @@ Router.post('/', async (req, res) => {
     if (!req.session.key) {
         res.redirect('/login')
     }
-    const acc = req.body
-    var auth = req.cookies['auth']
-    var id = req.cookies['session-secret']
-    const user = await User.findById(req.cookies['session-secret'])
+    const id = req.session.key
+    const user = await User.findById(id)
+    const auth = user.isAdmin
     let error = ''
     let uploader = upload.single('image')
     uploader(req, res, err => {
         let { pwd, lop, khoa, confirm_pwd } = req.body
-
         let image = req.file
-        // console.log('/'+image.filename)
         if (pwd.length > 0 && pwd.length < 6) {
             error = 'Mật khẩu mới phải có tối thiểu 6 kí tự'
         }
@@ -74,18 +71,7 @@ Router.post('/', async (req, res) => {
                     var hash_password = bcrypt.hashSync(pwd, 10)
                     if (image) {
                         await user.updateOne({ class: lop, khoa: khoa, password: hash_password, avatar: '/' + image.filename })
-                        const post = await Post.find({ email: user.email })
-                        await Post.updateMany({ email: user.email }, { user: { name: user.name, avatar: "/" + image.filename, email: user.email } })
-                            .then(function (err, data) {
-                                try {
-                                    console.log(data)
-                                }
-                                catch (err) {
-                                    console.log(err)
-                                    // throw err
-                                }
-                            })
-
+                        await Post.updateMany({ email: user.email }, { user: { name: user.name, avatar: "/" + image.filename, email: user.email } });
                     }
                     else {
                         await user.updateOne({ class: lop, khoa: khoa, password: hash_password })
@@ -95,25 +81,15 @@ Router.post('/', async (req, res) => {
                     if (image) {
                         await user.updateOne({ class: lop, khoa: khoa, avatar: '/' + image.filename })
                         const post = await Post.find({ email: user.email })
-                        await Post.updateMany({ email: user.email }, { user: { name: user.name, avatar: "/" + image.filename, email: user.email } })
-                            .then(function (err, data) {
-                                try {
-                                    console.log(data)
-                                }
-                                catch (err) {
-                                    console.log(err)
-                                }
-                            })
+                        await Post.updateMany({ email: user.email }, { user: { name: user.name, avatar: "/" + image.filename, email: user.email } });
                     }
                     else {
                         await user.updateOne({ class: lop, khoa: khoa })
-
                     }
                 }
             }
             updateInfo(lop, khoa, pwd, id)
             return res.redirect('/info')
-
         }
     })
 })

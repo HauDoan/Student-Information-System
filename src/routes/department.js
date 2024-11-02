@@ -23,7 +23,6 @@ Router.get("/", (req, res) => {
 
 Router.post('/', (req, res) => {
     let result = validationResult(req)
-    console.log(req.body)
     let message = '';
     if (result.errors.length === 0) {
         let { name, username, password, kyhieu } = req.body

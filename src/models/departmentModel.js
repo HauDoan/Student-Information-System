@@ -1,7 +1,7 @@
 import mongoose from 'mongoose'
-const Schema=mongoose.Schema
+const Schema = mongoose.Schema
 
-const PhongBanSchema=new Schema(
+const PhongBanSchema = new Schema(
     {
         name: {
             type: String,
@@ -10,13 +10,13 @@ const PhongBanSchema=new Schema(
             max: 20,
             unique: true,
         },
-        username:{
+        username: {
             type: String,
-            require:true,
+            require: true,
             max: 50,
-            unique:true,
+            unique: true,
         },
-        password :{
+        password: {
             type: String,
             required: true,
             min: 6
@@ -31,6 +31,6 @@ const PhongBanSchema=new Schema(
             type: Boolean,
             default: false
         },
-});
+    });
 
 export default mongoose.model('Phongban', PhongBanSchema)

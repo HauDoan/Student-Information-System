@@ -37,13 +37,7 @@
             </div>
             <div class="right_area">
                 <div class="home-header-imgProfile">
-                    <% if (auth==="1" ){ %>
-                        <img src="<%=user.avatar%>" alt="" class="">
-                        <% }%>
-                            <% if (auth==="0" ){ %>
-
-                                <img src="<%=user.avatar%>" alt="" class="">
-                                <% }%>
+                    <img src="<%=user.avatar%>" alt="" class="">
                 </div>
                 <br>
                 <h2 class="mt-2">
@@ -54,7 +48,7 @@
                     <a href="/info">
                         <li><i class="fa fa-user" aria-hidden="true"></i>Trang cá nhân</li>
                     </a>
-                    <% if (auth==='1' ){ %>
+                    <% if (auth ){ %>
                         <a href="/register">
                             <li><i class="fa fa-inbox" aria-hidden="true"></i>Tạo phòng ban</li>
                         </a>
