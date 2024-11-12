@@ -59,7 +59,7 @@ Router.post("/", async (req, res) => {
         let image = req.file
         let post = req.body
         if (!image) {
-            const newPost = new Post({ description: post.description, user: { name: user.name, avatar: user.avatar, email: user.email }, thumbnail: '', video: post.video, createdAt: moment().format('lll'), comments: [] })
+            const newPost = new Post({ description: post.description, user: { id: user.id, name: user.name, avatar: user.avatar, email: user.email }, thumbnail: '', video: post.video, createdAt: moment().format('lll'), comments: [] })
             newPost.save();
             res.send({ 'data': newPost })
         }
@@ -68,7 +68,7 @@ Router.post("/", async (req, res) => {
         }
         else {
             let path = image.path;
-            const newPost = new Post({ description: post.description, user: { name: user.name, avatar: user.avatar, email: user.email }, thumbnail: path.slice(7), video: post.video, createdAt: moment().format('lll'), comments: [], updatedAt: new Date() })
+            const newPost = new Post({ description: post.description, user: { id: user.id, name: user.name, avatar: user.avatar, email: user.email }, thumbnail: path.slice(7), video: post.video, createdAt: moment().format('lll'), comments: [], updatedAt: new Date() })
             newPost.save();
             res.send({ 'data': newPost })
         }
@@ -81,9 +81,9 @@ Router.post("/update/:id", async (req, res) => {
     if (!req.session.key) {
         res.redirect('/login')
     }
-    var id = req.session.key
-    let user = await User.findById(id);
-    var auth = user.isAdmin
+    const id = req.session.key
+    const user = await User.findById(id);
+    const idPost = req.params['id'] 
     const newPost = await Post.findById(idPost)
     await user.updateOne({ $push: { posts: newPost } })
     res.send('successful')

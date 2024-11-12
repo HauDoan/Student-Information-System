@@ -1,16 +1,17 @@
 import express from 'express'
-import User from '../models/adminModel.js'
+import User from '../models/accountModel.js'
 import bcrypt from 'bcrypt'
 import registerValidator from '../validator/registerValidator.js'
+import { validationResult } from 'express-validator'
 
 const Router = express();
 Router.get('/', async (req, res) => {
     if (!req.session.key) {
         res.redirect('/login')
     }
-    var id = req.session.key
-    let user = await User.findById(id);
-    var auth = user.isAdmin
+    const id = req.session.key
+    const user = await User.findById(id);
+    const auth = user.isAdmin
     const error = req.flash('error') || ''
     const password = req.flash('password') || ''
     const role = req.flash('role') || ''

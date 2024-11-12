@@ -128,7 +128,7 @@
                                             <div class="shareTop">
                                                 <img src="<%=user.avatar%>" class="shareProfileImg" id="imgProfile"
                                                     alt="">
-                                                <textarea name="description" id="description" onkeyup="countChar(this)"
+                                                <textarea data-id="<%= user.id %>" name="description" id="description" onkeyup="countChar(this)"
                                                     type="text" placeholder="What's in your mind"
                                                     class="shareInput"></textarea>
 
@@ -228,7 +228,7 @@
                                                 </span>
 
                                                 <span class="postDate">
-                                                    <%= e.timestamps %>
+                                                    <%= e.createdAt %>
                                                 </span>
 
                                                 <span class="postSetting" data-id="<%= e._id %>"><i
@@ -243,16 +243,17 @@
                                                         <li><i class="fa fa-user" aria-hidden="true"></i>Lưu bài
                                                             viết</li>
                                                     </a>
-                                                    <a href="#">
-                                                        <li><i class="fa fa-users" aria-hidden="true"></i>Chỉnh sửa
-                                                            bài viết</li>
-                                                    </a>
+                                                    <% if (e.user.id===user.id){ %>
+                                                        <a href="#">
+                                                            <li><i class="fa fa-users" aria-hidden="true"></i>Chỉnh sửa
+                                                                bài viết</li>
+                                                        </a>
 
-                                                    <a class="deletePost" href="#" data-id="<%= e._id %>">
-                                                        <li><i class="fa fa-inbox" aria-hidden="true"></i>Xóa bài
-                                                            viết</li>
-                                                    </a>
-
+                                                        <a class="deletePost" href="#" data-id="<%= e._id %>">
+                                                            <li><i class="fa fa-inbox" aria-hidden="true"></i>Xóa bài
+                                                                viết</li>
+                                                        </a>
+                                                        <% } %>
                                                 </ul>
 
                                             </div>
@@ -274,26 +275,22 @@
 
                                                         <% if (e.video!='' && e.thumbnail=='' ){%>
 
-                                                            <!-- <iframe width="775.18" height="400"
+                                                            <iframe width="775.18" height="400"
                                                                 src="https://www.youtube.com/embed/<%=e.video%>"
                                                                 title="YouTube video player" frameborder="0"
                                                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                                                allowfullscreen></iframe> -->
+                                                                allowfullscreen></iframe>
 
                                                             <% }%>
                                             </div>
-
-
 
                                         </div>
 
                                         <hr class="shareHr">
 
-
-
                                         <div class="home-nav-userComment">
 
-                                            <a href="">
+                                            <a href="/info">
                                                 <span class="home-comment-post">
                                                     <img src="<%=user.avatar%>" alt="">
                                                 </span>

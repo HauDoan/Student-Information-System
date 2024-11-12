@@ -46,7 +46,6 @@ Router.post('/register', (req, res) => {
                             return res.json({ code: 2, message: 'Register fail !!' + e.message })
                         })
                 }
-
             )
 
     }
@@ -57,10 +56,9 @@ Router.post('/register', (req, res) => {
             break;
         }
         return res.json({ code: 1, message: message })
-
     }
-
 })
+
 Router.put('/:id/follow', async (req, res) => {
     if (!req.session.key) {
         res.redirect('/login')

@@ -35,7 +35,7 @@ Router.get('/', async (req, res) => {
     try {
         const id = req.session.key
         const user = await User.findById(id)
-        var auth = user.isAdmin
+        let auth = user.isAdmin 
         res.render('info', { user, auth, error: "", lop: "", khoa: "", pwd: "", confirm_pwd: "" })
     }
     catch (err) {

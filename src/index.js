@@ -44,7 +44,7 @@ app.use(session({
     rolling: false,
     saveUninitialized: false,
     secret: 'somesecret',
-    cookie: { maxAge: 60000 },
+    cookie: { maxAge: 120000 },
     store: redisStore
 }));
 
